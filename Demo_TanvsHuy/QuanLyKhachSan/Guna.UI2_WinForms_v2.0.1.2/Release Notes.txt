@@ -1,0 +1,31 @@
+Improved> Guna2HScrollBar:
+- Supports binding to TextBox and RichTextBox
+> Example: Guna2HScrollBar1.BindingContainer = TextBox1
+Improved> Guna2VScrollBar:
+- Supports binding to TextBox and RichTextBox
+> Example: Guna2VScrollBar1.BindingContainer = TextBox1
+
+Fixed > Guna2TextBox: 
+- Fixed an issue with the HoverState.FillColor property
+- Fixed an issue with the HoverState.ForeColor property
+- Fixed an issue with the HoverState.PlaceholderForeColor property
+- Fixed an issue with the FocusedState.FillColor property
+- Fixed an issue with the FocusedState.ForeColor property
+- Fixed an issue with the FocusedState.PlaceholderForeColor property
+Fixed > Guna2NumericUpDown:
+-Fixed an issue with the KeyDown event
+Fixed > Guna2ProgressIndicator:
+- Fixed an issue with the Anchor property
+Fixed > Guna2HScrollBar:
+- Fixed an issue with the BinderContainer property not working on the control panel or container-control
+Fixed > Guna2VScrollBar:
+- Fixed an issue with the BinderContainer property not working on the control panel or container-control
+Fixed > Guna2DateTimePicker:
+- Fixed an issue with time input
+- Fixed an issue with the ShowUpDown property
+Fixed > Guna2ComboBox:
+- Fixed an issue with focus
+Fixed > Guna2BorderlessForm:
+- Fixed an issue with the DockForm property
+Fixed > Guna2DragControl:
+- Fixed an issue with the DockForm property
