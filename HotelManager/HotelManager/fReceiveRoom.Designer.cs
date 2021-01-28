@@ -30,12 +30,12 @@ namespace HotelManager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fReceiveRoom));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -72,9 +72,9 @@ namespace HotelManager
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbRoom = new MetroFramework.Controls.MetroComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbRoomType = new MetroFramework.Controls.MetroComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.cbRoomType = new MetroFramework.Controls.MetroComboBox();
             this.groupBox4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReceiveRoom)).BeginInit();
@@ -161,56 +161,57 @@ namespace HotelManager
             this.btnDetails.Size = new System.Drawing.Size(203, 40);
             this.btnDetails.TabIndex = 48;
             this.btnDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // dataGridViewReceiveRoom
             // 
             this.dataGridViewReceiveRoom.AllowDrop = true;
             this.dataGridViewReceiveRoom.AllowUserToAddRows = false;
             this.dataGridViewReceiveRoom.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            this.dataGridViewReceiveRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            this.dataGridViewReceiveRoom.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewReceiveRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewReceiveRoom.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewReceiveRoom.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewReceiveRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewReceiveRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewReceiveRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewReceiveRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewReceiveRoom.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewReceiveRoom.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewReceiveRoom.GridColor = System.Drawing.Color.White;
             this.dataGridViewReceiveRoom.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewReceiveRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewReceiveRoom.Name = "dataGridViewReceiveRoom";
             this.dataGridViewReceiveRoom.ReadOnly = true;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewReceiveRoom.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewReceiveRoom.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewReceiveRoom.RowHeadersVisible = false;
-            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewReceiveRoom.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewReceiveRoom.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewReceiveRoom.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewReceiveRoom.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridViewReceiveRoom.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
@@ -310,6 +311,7 @@ namespace HotelManager
             this.btnCancel.Size = new System.Drawing.Size(203, 40);
             this.btnCancel.TabIndex = 46;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReceiveRoom
             // 
@@ -335,6 +337,7 @@ namespace HotelManager
             this.btnReceiveRoom.Size = new System.Drawing.Size(203, 40);
             this.btnReceiveRoom.TabIndex = 45;
             this.btnReceiveRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnReceiveRoom.Click += new System.EventHandler(this.btnReceiveRoom_Click);
             // 
             // label5
             // 
@@ -684,9 +687,9 @@ namespace HotelManager
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbRoomType);
             this.groupBox2.Controls.Add(this.cbRoom);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.cbRoomType);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox2.ForeColor = System.Drawing.Color.SeaGreen;
@@ -721,19 +724,6 @@ namespace HotelManager
             this.label1.TabIndex = 53;
             this.label1.Text = "Phòng:";
             // 
-            // cbRoomType
-            // 
-            this.cbRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cbRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbRoomType.FormattingEnabled = true;
-            this.cbRoomType.ItemHeight = 23;
-            this.cbRoomType.Location = new System.Drawing.Point(27, 47);
-            this.cbRoomType.Name = "cbRoomType";
-            this.cbRoomType.Size = new System.Drawing.Size(203, 29);
-            this.cbRoomType.Style = MetroFramework.MetroColorStyle.Green;
-            this.cbRoomType.TabIndex = 52;
-            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoomType_SelectedIndexChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -757,6 +747,19 @@ namespace HotelManager
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // cbRoomType
+            // 
+            this.cbRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbRoomType.FormattingEnabled = true;
+            this.cbRoomType.ItemHeight = 23;
+            this.cbRoomType.Location = new System.Drawing.Point(27, 46);
+            this.cbRoomType.Name = "cbRoomType";
+            this.cbRoomType.Size = new System.Drawing.Size(203, 29);
+            this.cbRoomType.Style = MetroFramework.MetroColorStyle.Green;
+            this.cbRoomType.TabIndex = 54;
+            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
             // 
             // fReceiveRoom
             // 
@@ -814,7 +817,6 @@ namespace HotelManager
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroComboBox cbRoom;
         private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroComboBox cbRoomType;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMetroTextbox txbPrice;
         private System.Windows.Forms.Label label10;
@@ -831,5 +833,6 @@ namespace HotelManager
         private Bunifu.Framework.UI.BunifuThinButton2 btnClose_;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDetails;
         private System.Windows.Forms.Button btnClose;
+        private MetroFramework.Controls.MetroComboBox cbRoomType;
     }
 }

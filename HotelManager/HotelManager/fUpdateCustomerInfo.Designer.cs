@@ -1,7 +1,7 @@
 ﻿
 namespace HotelManager
 {
-    partial class fAddCustomerInfo
+    partial class fUpdateCustomerInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace HotelManager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAddCustomerInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fUpdateCustomerInfo));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
@@ -56,13 +56,8 @@ namespace HotelManager
             this.btnClose_ = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnAddCustomer = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txbIDCardSearch = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuDragControl1
@@ -79,9 +74,9 @@ namespace HotelManager
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
             this.label2.Location = new System.Drawing.Point(5, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 37);
+            this.label2.Size = new System.Drawing.Size(405, 37);
             this.label2.TabIndex = 27;
-            this.label2.Text = "Thêm Khách Hàng";
+            this.label2.Text = "Cập Nhật Thông Tin Khách Hàng";
             // 
             // bunifuSeparator1
             // 
@@ -117,7 +112,7 @@ namespace HotelManager
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox2.Location = new System.Drawing.Point(6, 156);
+            this.groupBox2.Location = new System.Drawing.Point(8, 55);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(453, 258);
             this.groupBox2.TabIndex = 49;
@@ -143,7 +138,6 @@ namespace HotelManager
             "Anh",
             "Pháp",
             "Đức",
-            "Hoa Kỳ",
             "Hà Lan",
             "Tây Ban Nha",
             "Ý",
@@ -333,7 +327,6 @@ namespace HotelManager
             this.txbIDCard.Size = new System.Drawing.Size(203, 29);
             this.txbIDCard.TabIndex = 22;
             this.txbIDCard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbIDCard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbIDCard_KeyPress);
             // 
             // label15
             // 
@@ -383,7 +376,7 @@ namespace HotelManager
             this.groupBox1.Controls.Add(this.bunifuThinButton21);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox1.Location = new System.Drawing.Point(6, 420);
+            this.groupBox1.Location = new System.Drawing.Point(8, 315);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(453, 124);
             this.groupBox1.TabIndex = 51;
@@ -425,7 +418,7 @@ namespace HotelManager
             this.btnAddCustomer.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.btnAddCustomer.BackColor = System.Drawing.Color.White;
             this.btnAddCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.BackgroundImage")));
-            this.btnAddCustomer.ButtonText = "Thêm Khách Hàng";
+            this.btnAddCustomer.ButtonText = "Lưu Thay Đổi";
             this.btnAddCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddCustomer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.ForeColor = System.Drawing.Color.SeaGreen;
@@ -468,97 +461,23 @@ namespace HotelManager
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Controls.Add(this.txbIDCardSearch);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.groupBox3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.groupBox3.Location = new System.Drawing.Point(6, 58);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(454, 94);
-            this.groupBox3.TabIndex = 52;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tìm kiếm khách hàng";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.ActiveBorderThickness = 1;
-            this.btnSearch.ActiveCornerRadius = 20;
-            this.btnSearch.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.ActiveForecolor = System.Drawing.Color.White;
-            this.btnSearch.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.ButtonText = "Tìm Kiếm";
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.IdleBorderThickness = 1;
-            this.btnSearch.IdleCornerRadius = 20;
-            this.btnSearch.IdleFillColor = System.Drawing.Color.White;
-            this.btnSearch.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.Location = new System.Drawing.Point(240, 41);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(203, 40);
-            this.btnSearch.TabIndex = 46;
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txbIDCardSearch
-            // 
-            this.txbIDCardSearch.BorderColorFocused = System.Drawing.Color.SeaGreen;
-            this.txbIDCardSearch.BorderColorIdle = System.Drawing.Color.SeaGreen;
-            this.txbIDCardSearch.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
-            this.txbIDCardSearch.BorderThickness = 1;
-            this.txbIDCardSearch.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txbIDCardSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbIDCardSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txbIDCardSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txbIDCardSearch.isPassword = false;
-            this.txbIDCardSearch.Location = new System.Drawing.Point(9, 49);
-            this.txbIDCardSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txbIDCardSearch.MaxLength = 32767;
-            this.txbIDCardSearch.Name = "txbIDCardSearch";
-            this.txbIDCardSearch.Size = new System.Drawing.Size(203, 29);
-            this.txbIDCardSearch.TabIndex = 27;
-            this.txbIDCardSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbIDCardSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbIDCardSearch_KeyPress);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(5, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(153, 20);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Thẻ căn cước/ CMND:";
-            // 
-            // fAddCustomerInfo
+            // fUpdateCustomerInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(466, 549);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(466, 445);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "fAddCustomerInfo";
+            this.Name = "fUpdateCustomerInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fAddCustomerInfo";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,10 +508,6 @@ namespace HotelManager
         private Bunifu.Framework.UI.BunifuMetroTextbox txbFullName;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnSearch;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txbIDCardSearch;
-        private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroComboBox cbNationality;
         private Bunifu.Framework.UI.BunifuThinButton2 btnClose_;
     }

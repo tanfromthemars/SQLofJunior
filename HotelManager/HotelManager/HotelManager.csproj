@@ -83,6 +83,18 @@
     <Compile Include="fBookRoom.Designer.cs">
       <DependentUpon>fBookRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="fBookRoomDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBookRoomDetails.Designer.cs">
+      <DependentUpon>fBookRoomDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fChangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChangeRoom.Designer.cs">
+      <DependentUpon>fChangeRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,10 +113,31 @@
     <Compile Include="fReceiveRoom.Designer.cs">
       <DependentUpon>fReceiveRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="fReceiveRoomDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fReceiveRoomDetails.Designer.cs">
+      <DependentUpon>fReceiveRoomDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fUpdateCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUpdateCustomerInfo.Designer.cs">
+      <DependentUpon>fUpdateCustomerInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAddCustomerInfo.resx">
+      <DependentUpon>fAddCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fBookRoom.resx">
       <DependentUpon>fBookRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBookRoomDetails.resx">
+      <DependentUpon>fBookRoomDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fChangeRoom.resx">
+      <DependentUpon>fChangeRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
@@ -114,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fReceiveRoom.resx">
       <DependentUpon>fReceiveRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fReceiveRoomDetails.resx">
+      <DependentUpon>fReceiveRoomDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fUpdateCustomerInfo.resx">
+      <DependentUpon>fUpdateCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

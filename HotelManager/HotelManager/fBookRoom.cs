@@ -172,10 +172,30 @@ namespace HotelManager
                     if (bunifuCheckbox1.Checked)
                     {
                         this.Hide();
-                        
-                    }    
-                }    
+                        fReceiveRoom fReceiveRoom = new fReceiveRoom(GetCurrentIDBookRoom(DateTime.Now.Date));
+                        fReceiveRoom.ShowDialog();
+                    }
+                }
+                else
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }    
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+
+        private void btnClose__Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            int idBookRoom = (int)dataGridViewBookRoom.SelectedRows[0].Cells[0].Value;
+            string idCard = dataGridViewBookRoom.SelectedRows[0].Cells[2].Value.ToString();
+            
         }
     }
 }

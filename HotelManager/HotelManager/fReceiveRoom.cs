@@ -119,8 +119,69 @@ namespace HotelManager
         {
             if (txbRoomName.Text != string.Empty && txbRoomTypeName.Text != string.Empty && txbFullName.Text != string.Empty && txbIDCard.Text != string.Empty && txbDateCheckIn.Text != string.Empty && txbDateCheckOut.Text != string.Empty && txbAmountPeople.Text != string.Empty && txbPrice.Text != string.Empty)
             {
+                fAddCustomerInfo fAddCustomerInfo = new fAddCustomerInfo();
+                fAddCustomerInfo.ShowDialog();
+                this.Show();
+            }
+            else
+                MessageBox.Show("Vui lòng nhập lại đầy đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
 
+        private void btnReceiveRoom_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn nhận phòng không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (txbRoomName.Text != string.Empty && txbRoomTypeName.Text != string.Empty && txbFullName.Text != string.Empty && txbIDCard.Text != string.Empty && txbDateCheckIn.Text != string.Empty && txbDateCheckOut.Text != string.Empty && txbAmountPeople.Text != string.Empty && txbPrice.Text != string.Empty)
+                {
+                    if (dateCheckIn == DateTime.Now.Date)
+                    {
+                        int idBookRoom;
+                        if (IDBookRoom != -1)
+                            idBookRoom = IDBookRoom;
+                        else
+                            idBookRoom = int.Parse(btnSearch.Tag.ToString());
+                        int idRoom = (cbRoom.SelectedItem as RoomDTO).Id;
+                        if (InsertReceiveRoom(idBookRoom, idRoom))
+                        {
+                            if (fAddCustomerInfo.ListIdCustomer != null)
+                            {
+                                foreach (int item in fAddCustomerInfo.ListIdCustomer)
+                                {
+                                    if (item != int.Parse(txbIDCard.Text))
+                                        InsertReceiveRoomDetails(ReceiveRoomDAO.Instance.GetIDCurrent(), item);
+                                }
+                            }
+                            MessageBox.Show("Nhận phòng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadEmptyRoom((cbRoomType.SelectedItem as RoomTypeDTO).Id);
+                        }
+                        else
+                            MessageBox.Show("Tạo phiếu nhận phòng thất bại.\nVui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                        MessageBox.Show("Ngày nhận phòng không hợp lệ.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ClearData();
+                    LoadReceiveRoomInfo();
+                }
+                else
+                    MessageBox.Show("Vui lòng nhập lại đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }    
+        }
+        public void ClearData()
+        {
+            txbFullName.Text = txbIDCard.Text = txbRoomTypeName.Text = txbDateCheckIn.Text = txbDateCheckOut.Text = txbAmountPeople.Text = txbPrice.Text = string.Empty;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            ClearData();
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            fReceiveRoomDetails f = new fReceiveRoomDetails((int)dataGridViewReceiveRoom.SelectedRows[0].Cells[0].Value);
+            f.ShowDialog();
+            Show();
+            LoadReceiveRoomInfo();
         }
     }
 }
