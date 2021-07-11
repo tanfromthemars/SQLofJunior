@@ -274,7 +274,6 @@ namespace HotelManager
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 48;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
             // 
             // btnAddCustomer
             // 
@@ -300,7 +299,6 @@ namespace HotelManager
             this.btnAddCustomer.Size = new System.Drawing.Size(203, 40);
             this.btnAddCustomer.TabIndex = 47;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // groupBox1
             // 
@@ -351,7 +349,6 @@ namespace HotelManager
             this.bunifuThinButton23.Size = new System.Drawing.Size(155, 40);
             this.bunifuThinButton23.TabIndex = 50;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // bunifuThinButton22
             // 
@@ -377,7 +374,6 @@ namespace HotelManager
             this.bunifuThinButton22.Size = new System.Drawing.Size(152, 40);
             this.bunifuThinButton22.TabIndex = 49;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // bunifuThinButton21
             // 
@@ -403,7 +399,6 @@ namespace HotelManager
             this.bunifuThinButton21.Size = new System.Drawing.Size(152, 40);
             this.bunifuThinButton21.TabIndex = 48;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // dataGridView
             // 

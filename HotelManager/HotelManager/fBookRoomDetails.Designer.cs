@@ -309,7 +309,6 @@ namespace HotelManager
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 48;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
             // 
             // groupBox2
             // 

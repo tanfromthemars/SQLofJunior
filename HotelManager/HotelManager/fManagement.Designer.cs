@@ -238,7 +238,6 @@ namespace HotelManager
             this.titleBookRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titleBookRoom.UseTileImage = true;
             this.titleBookRoom.UseVisualStyleBackColor = false;
-            this.titleBookRoom.Click += new System.EventHandler(this.titleBookRoom_Click);
             // 
             // panelLeft
             // 
@@ -294,7 +293,6 @@ namespace HotelManager
             this.btnNavigationPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNavigationPanel.Textcolor = System.Drawing.Color.White;
             this.btnNavigationPanel.TextFont = new System.Drawing.Font("Segoe UI", 9.75F);
-            this.btnNavigationPanel.Click += new System.EventHandler(this.btnNavigationPanel_Click);
             // 
             // btnAccountProfile
             // 
@@ -486,7 +484,6 @@ namespace HotelManager
             this.btnClose.TabIndex = 55;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // fManagement
             // 

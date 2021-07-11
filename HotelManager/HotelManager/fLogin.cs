@@ -17,23 +17,5 @@ namespace HotelManager
         {
             InitializeComponent();
         }
-        public bool Login()
-        {
-            return AccountDAO.Instance.Login(txbUserName.Text, txbPassWord.Text);
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            if (Login())
-            {
-                this.Hide();
-                
-            }
-        }
     }
 }

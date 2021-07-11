@@ -182,7 +182,6 @@
             this.btnLogin.Size = new System.Drawing.Size(370, 40);
             this.btnLogin.TabIndex = 22;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // bunifuSeparator1
             // 
@@ -244,7 +243,6 @@
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // fLogin
             // 

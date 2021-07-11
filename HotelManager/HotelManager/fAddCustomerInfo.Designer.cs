@@ -302,7 +302,6 @@ namespace HotelManager
             this.txbPhoneNumber.Size = new System.Drawing.Size(203, 29);
             this.txbPhoneNumber.TabIndex = 24;
             this.txbPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
             // 
             // label14
             // 
@@ -333,7 +332,6 @@ namespace HotelManager
             this.txbIDCard.Size = new System.Drawing.Size(203, 29);
             this.txbIDCard.TabIndex = 22;
             this.txbIDCard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbIDCard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbIDCard_KeyPress);
             // 
             // label15
             // 
@@ -414,7 +412,6 @@ namespace HotelManager
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 51;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
             // 
             // btnAddCustomer
             // 
@@ -440,7 +437,6 @@ namespace HotelManager
             this.btnAddCustomer.Size = new System.Drawing.Size(203, 40);
             this.btnAddCustomer.TabIndex = 48;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // bunifuThinButton21
             // 
@@ -466,7 +462,6 @@ namespace HotelManager
             this.bunifuThinButton21.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton21.TabIndex = 50;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // groupBox3
             // 
@@ -506,7 +501,6 @@ namespace HotelManager
             this.btnSearch.Size = new System.Drawing.Size(203, 40);
             this.btnSearch.TabIndex = 46;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txbIDCardSearch
             // 
@@ -526,7 +520,6 @@ namespace HotelManager
             this.txbIDCardSearch.Size = new System.Drawing.Size(203, 29);
             this.txbIDCardSearch.TabIndex = 27;
             this.txbIDCardSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbIDCardSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbIDCardSearch_KeyPress);
             // 
             // label9
             // 

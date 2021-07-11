@@ -161,7 +161,6 @@ namespace HotelManager
             this.btnDetails.Size = new System.Drawing.Size(203, 40);
             this.btnDetails.TabIndex = 48;
             this.btnDetails.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
             // dataGridViewReceiveRoom
             // 
@@ -285,7 +284,6 @@ namespace HotelManager
             this.btnAddCustomer.Size = new System.Drawing.Size(203, 40);
             this.btnAddCustomer.TabIndex = 47;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnCancel
             // 
@@ -311,7 +309,6 @@ namespace HotelManager
             this.btnCancel.Size = new System.Drawing.Size(203, 40);
             this.btnCancel.TabIndex = 46;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReceiveRoom
             // 
@@ -337,7 +334,6 @@ namespace HotelManager
             this.btnReceiveRoom.Size = new System.Drawing.Size(203, 40);
             this.btnReceiveRoom.TabIndex = 45;
             this.btnReceiveRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnReceiveRoom.Click += new System.EventHandler(this.btnReceiveRoom_Click);
             // 
             // label5
             // 
@@ -368,7 +364,6 @@ namespace HotelManager
             this.txbIDBookRoom.Size = new System.Drawing.Size(203, 29);
             this.txbIDBookRoom.TabIndex = 27;
             this.txbIDBookRoom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbIDBookRoom.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbIDBookRoom_KeyPress);
             // 
             // groupBox3
             // 
@@ -408,7 +403,6 @@ namespace HotelManager
             this.btnSearch.Size = new System.Drawing.Size(203, 40);
             this.btnSearch.TabIndex = 46;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox6
             // 
@@ -711,7 +705,6 @@ namespace HotelManager
             this.cbRoom.Size = new System.Drawing.Size(203, 29);
             this.cbRoom.Style = MetroFramework.MetroColorStyle.Green;
             this.cbRoom.TabIndex = 54;
-            this.cbRoom.SelectedIndexChanged += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -746,7 +739,6 @@ namespace HotelManager
             this.btnClose.TabIndex = 48;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // cbRoomType
             // 
@@ -759,7 +751,6 @@ namespace HotelManager
             this.cbRoomType.Size = new System.Drawing.Size(203, 29);
             this.cbRoomType.Style = MetroFramework.MetroColorStyle.Green;
             this.cbRoomType.TabIndex = 54;
-            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
             // 
             // fReceiveRoom
             // 
