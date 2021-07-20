@@ -55,28 +55,25 @@
   <ItemGroup>
     <Compile Include="DAO\AccessDAO.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
-    <Compile Include="DAO\AccountTypeDAO.cs" />
-    <Compile Include="DAO\BookRoomDAO.cs" />
-    <Compile Include="DAO\CustomerDAO.cs" />
-    <Compile Include="DAO\CustomerTypeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DAO\ReceiveRoomDAO.cs" />
-    <Compile Include="DAO\ReceiveRoomDetailsDAO.cs" />
-    <Compile Include="DAO\RoomDAO.cs" />
-    <Compile Include="DAO\RoomTypeDAO.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
-    <Compile Include="DTO\AccountTypeDTO.cs" />
-    <Compile Include="DTO\BookRoomDTO.cs" />
-    <Compile Include="DTO\CustomerDTO.cs" />
-    <Compile Include="DTO\CustomerTypeDTO.cs" />
-    <Compile Include="DTO\ReceiveRoomDTO.cs" />
-    <Compile Include="DTO\RoomDTO.cs" />
-    <Compile Include="DTO\RoomTypeDTO.cs" />
+    <Compile Include="fAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAbout.Designer.cs">
+      <DependentUpon>fAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="fAddCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fAddCustomerInfo.Designer.cs">
       <DependentUpon>fAddCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBill.Designer.cs">
+      <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
     <Compile Include="fBookRoom.cs">
       <SubType>Form</SubType>
@@ -96,6 +93,12 @@
     <Compile Include="fChangeRoom.Designer.cs">
       <DependentUpon>fChangeRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="fCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCustomer.Designer.cs">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +110,18 @@
     </Compile>
     <Compile Include="fManagement.Designer.cs">
       <DependentUpon>fManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fParameter.Designer.cs">
+      <DependentUpon>fParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fProfile.Designer.cs">
+      <DependentUpon>fProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="fReceiveRoom.cs">
       <SubType>Form</SubType>
@@ -120,14 +135,47 @@
     <Compile Include="fReceiveRoomDetails.Designer.cs">
       <DependentUpon>fReceiveRoomDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="fReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fReport.Designer.cs">
+      <DependentUpon>fReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRoom.Designer.cs">
+      <DependentUpon>fRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fService.Designer.cs">
+      <DependentUpon>fService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fStaff.Designer.cs">
+      <DependentUpon>fStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="fUpdateCustomerInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fUpdateCustomerInfo.Designer.cs">
       <DependentUpon>fUpdateCustomerInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="fUseService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fUseService.Designer.cs">
+      <DependentUpon>fUseService.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fAbout.resx">
+      <DependentUpon>fAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fAddCustomerInfo.resx">
       <DependentUpon>fAddCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +203,9 @@
     <EmbeddedResource Include="fUpdateCustomerInfo.resx">
       <DependentUpon>fUpdateCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fUseService.resx">
+      <DependentUpon>fUseService.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -177,6 +228,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dasd\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

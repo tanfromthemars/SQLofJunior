@@ -33,6 +33,9 @@ namespace HotelManager
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fManagement));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelRight = new System.Windows.Forms.Panel();
+            this.titleSendRoom = new Bunifu.Framework.UI.BunifuTileButton();
+            this.titleSignUpRoom = new Bunifu.Framework.UI.BunifuTileButton();
+            this.btnClose = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.metroTile17 = new MetroFramework.Controls.MetroTile();
             this.metroTile16 = new MetroFramework.Controls.MetroTile();
@@ -52,7 +55,6 @@ namespace HotelManager
             this.btnHelp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnIntroduce = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panelRight.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +69,8 @@ namespace HotelManager
             // panelRight
             // 
             this.panelRight.BackColor = System.Drawing.Color.White;
+            this.panelRight.Controls.Add(this.titleSendRoom);
+            this.panelRight.Controls.Add(this.titleSignUpRoom);
             this.panelRight.Controls.Add(this.btnClose);
             this.panelRight.Controls.Add(this.bunifuSeparator1);
             this.panelRight.Controls.Add(this.metroTile17);
@@ -85,6 +89,59 @@ namespace HotelManager
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(939, 583);
             this.panelRight.TabIndex = 1;
+            // 
+            // titleSendRoom
+            // 
+            this.titleSendRoom.BackColor = System.Drawing.Color.SeaGreen;
+            this.titleSendRoom.color = System.Drawing.Color.SeaGreen;
+            this.titleSendRoom.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.titleSendRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.titleSendRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.titleSendRoom.ForeColor = System.Drawing.Color.White;
+            this.titleSendRoom.Image = ((System.Drawing.Image)(resources.GetObject("titleSendRoom.Image")));
+            this.titleSendRoom.ImagePosition = 20;
+            this.titleSendRoom.ImageZoom = 50;
+            this.titleSendRoom.LabelPosition = 41;
+            this.titleSendRoom.LabelText = "Tile 1";
+            this.titleSendRoom.Location = new System.Drawing.Point(331, 233);
+            this.titleSendRoom.Margin = new System.Windows.Forms.Padding(6);
+            this.titleSendRoom.Name = "titleSendRoom";
+            this.titleSendRoom.Size = new System.Drawing.Size(134, 89);
+            this.titleSendRoom.TabIndex = 56;
+            this.titleSendRoom.Click += new System.EventHandler(this.titleSendRoom_Click);
+            // 
+            // titleSignUpRoom
+            // 
+            this.titleSignUpRoom.BackColor = System.Drawing.Color.SeaGreen;
+            this.titleSignUpRoom.color = System.Drawing.Color.SeaGreen;
+            this.titleSignUpRoom.colorActive = System.Drawing.Color.MediumSeaGreen;
+            this.titleSignUpRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.titleSignUpRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.titleSignUpRoom.ForeColor = System.Drawing.Color.White;
+            this.titleSignUpRoom.Image = ((System.Drawing.Image)(resources.GetObject("titleSignUpRoom.Image")));
+            this.titleSignUpRoom.ImagePosition = 20;
+            this.titleSignUpRoom.ImageZoom = 50;
+            this.titleSignUpRoom.LabelPosition = 41;
+            this.titleSignUpRoom.LabelText = "Tile 1";
+            this.titleSignUpRoom.Location = new System.Drawing.Point(29, 171);
+            this.titleSignUpRoom.Margin = new System.Windows.Forms.Padding(6);
+            this.titleSignUpRoom.Name = "titleSignUpRoom";
+            this.titleSignUpRoom.Size = new System.Drawing.Size(128, 129);
+            this.titleSignUpRoom.TabIndex = 56;
+            this.titleSignUpRoom.Click += new System.EventHandler(this.titleSignUpRoom_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.Color.Red;
+            this.btnClose.Location = new System.Drawing.Point(907, 9);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 26);
+            this.btnClose.TabIndex = 55;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // bunifuSeparator1
             // 
@@ -110,6 +167,7 @@ namespace HotelManager
             this.metroTile17.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile17.UseTileImage = true;
             this.metroTile17.UseVisualStyleBackColor = false;
+            this.metroTile17.Click += new System.EventHandler(this.metroTile17_Click);
             // 
             // metroTile16
             // 
@@ -123,6 +181,7 @@ namespace HotelManager
             this.metroTile16.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile16.UseTileImage = true;
             this.metroTile16.UseVisualStyleBackColor = false;
+            this.metroTile16.Click += new System.EventHandler(this.metroTile16_Click);
             // 
             // metroTile13
             // 
@@ -136,6 +195,7 @@ namespace HotelManager
             this.metroTile13.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile13.UseTileImage = true;
             this.metroTile13.UseVisualStyleBackColor = false;
+            this.metroTile13.Click += new System.EventHandler(this.metroTile13_Click);
             // 
             // title
             // 
@@ -149,6 +209,7 @@ namespace HotelManager
             this.title.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.title.UseTileImage = true;
             this.title.UseVisualStyleBackColor = false;
+            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // titleManageRoom
             // 
@@ -162,6 +223,7 @@ namespace HotelManager
             this.titleManageRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titleManageRoom.UseTileImage = true;
             this.titleManageRoom.UseVisualStyleBackColor = false;
+            this.titleManageRoom.Click += new System.EventHandler(this.titleManageRoom_Click);
             // 
             // metroTile2
             // 
@@ -175,6 +237,7 @@ namespace HotelManager
             this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile2.UseTileImage = true;
             this.metroTile2.UseVisualStyleBackColor = false;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
             // 
             // metroTile8
             // 
@@ -188,6 +251,7 @@ namespace HotelManager
             this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.metroTile8.UseTileImage = true;
             this.metroTile8.UseVisualStyleBackColor = false;
+            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
             // 
             // titlePay
             // 
@@ -201,6 +265,7 @@ namespace HotelManager
             this.titlePay.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titlePay.UseTileImage = true;
             this.titlePay.UseVisualStyleBackColor = false;
+            this.titlePay.Click += new System.EventHandler(this.titlePay_Click);
             // 
             // titleRecieveRoom
             // 
@@ -214,6 +279,7 @@ namespace HotelManager
             this.titleRecieveRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titleRecieveRoom.UseTileImage = true;
             this.titleRecieveRoom.UseVisualStyleBackColor = false;
+            this.titleRecieveRoom.Click += new System.EventHandler(this.titleRecieveRoom_Click);
             // 
             // label2
             // 
@@ -293,6 +359,7 @@ namespace HotelManager
             this.btnNavigationPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNavigationPanel.Textcolor = System.Drawing.Color.White;
             this.btnNavigationPanel.TextFont = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnNavigationPanel.Click += new System.EventHandler(this.btnNavigationPanel_Click);
             // 
             // btnAccountProfile
             // 
@@ -329,6 +396,7 @@ namespace HotelManager
             this.btnAccountProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAccountProfile.Textcolor = System.Drawing.Color.White;
             this.btnAccountProfile.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccountProfile.Click += new System.EventHandler(this.btnAccountProfile_Click);
             // 
             // btnLogOut
             // 
@@ -365,6 +433,7 @@ namespace HotelManager
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.Textcolor = System.Drawing.Color.White;
             this.btnLogOut.TextFont = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnHelp
             // 
@@ -437,6 +506,7 @@ namespace HotelManager
             this.btnIntroduce.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIntroduce.Textcolor = System.Drawing.Color.White;
             this.btnIntroduce.TextFont = new System.Drawing.Font("Segoe UI", 9.75F);
+            this.btnIntroduce.Click += new System.EventHandler(this.btnIntroduce_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -472,18 +542,6 @@ namespace HotelManager
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.White;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.ForeColor = System.Drawing.Color.Red;
-            this.btnClose.Location = new System.Drawing.Point(907, 9);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 26);
-            this.btnClose.TabIndex = 55;
-            this.btnClose.Text = "X";
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // fManagement
             // 
@@ -529,5 +587,7 @@ namespace HotelManager
         private Bunifu.Framework.UI.BunifuFlatButton btnNavigationPanel;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Button btnClose;
+        private Bunifu.Framework.UI.BunifuTileButton titleSignUpRoom;
+        private Bunifu.Framework.UI.BunifuTileButton titleSendRoom;
     }
 }

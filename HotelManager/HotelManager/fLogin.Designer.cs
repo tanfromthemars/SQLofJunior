@@ -97,7 +97,7 @@
             this.txbUserName.BorderThickness = 1;
             this.txbUserName.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbUserName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbUserName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbUserName.isPassword = false;
             this.txbUserName.Location = new System.Drawing.Point(332, 97);
@@ -116,7 +116,7 @@
             this.txbPassWord.BorderThickness = 1;
             this.txbPassWord.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbPassWord.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbPassWord.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbPassWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbPassWord.isPassword = true;
             this.txbPassWord.Location = new System.Drawing.Point(332, 172);
@@ -126,6 +126,7 @@
             this.txbPassWord.Size = new System.Drawing.Size(370, 29);
             this.txbPassWord.TabIndex = 1;
             this.txbPassWord.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbPassWord.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPassWord_KeyPress);
             // 
             // pictureBox1
             // 
@@ -182,6 +183,7 @@
             this.btnLogin.Size = new System.Drawing.Size(370, 40);
             this.btnLogin.TabIndex = 22;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // bunifuSeparator1
             // 
@@ -219,6 +221,7 @@
             this.btnExit_.Size = new System.Drawing.Size(370, 40);
             this.btnExit_.TabIndex = 29;
             this.btnExit_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExit_.Click += new System.EventHandler(this.btnExit__Click);
             // 
             // bunifuSeparator2
             // 
@@ -243,6 +246,7 @@
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // fLogin
             // 

@@ -10,8 +10,20 @@ namespace HotelManager.DAO
 {
     public class DataProvider
     {
+        public static DataProvider Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new DataProvider();
+                return instance;
+            }
+            private set => instance = value;
+        }
+        private DataProvider() { }
+
         private static DataProvider instance;
-        private string connectionStr = @"Data Source=MCQUEEN-C9A5R;Initial Catalog=HotelManagement;Integrated Secutity=true";
+        private string connectionStr = @"Data Source=DESKTOP-76EKPOO;Initial Catalog=HotelManagement;Integrated Security=True";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -68,16 +80,5 @@ namespace HotelManager.DAO
                 }
             }
         }
-        public static DataProvider Instance
-        {
-            get 
-            { 
-                if (instance == null)
-                    instance = new DataProvider();
-                return instance;
-            }
-            private set => instance = value;
-        }
-        private DataProvider() { }
     }
 }
