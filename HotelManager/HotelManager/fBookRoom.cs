@@ -19,5 +19,13 @@ namespace HotelManager
         {
             InitializeComponent();
         }
+        public void LoadData()
+        {
+
+        }
+        public void LoadRoomType()
+        {
+            cbRoomType.DataSource = 
+        }
     }
 }
