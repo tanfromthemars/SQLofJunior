@@ -37,8 +37,14 @@
     <Reference Include="Bunifu.UI.WinForms.1.5.3">
       <HintPath>..\packages\Bunifu.UI.WinForms.4.1.1\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="MetroFramework">
-      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -56,16 +62,30 @@
     <Compile Include="DAO\AccessDAO.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BillDAO.cs" />
+    <Compile Include="DAO\BillDetailsDAO.cs" />
+    <Compile Include="DAO\BookRoomDAO.cs" />
     <Compile Include="DAO\CustomerDAO.cs" />
+    <Compile Include="DAO\CustomerTypeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DateTable.cs" />
+    <Compile Include="DAO\ReceiveRoomDAO.cs" />
+    <Compile Include="DAO\ReceiveRoomDetailsDAO.cs" />
     <Compile Include="DAO\ReportDAO.cs" />
     <Compile Include="DAO\RoomDAO.cs" />
     <Compile Include="DAO\RoomTypeDAO.cs" />
+    <Compile Include="DAO\ServiceDAO.cs" />
+    <Compile Include="DAO\ServiceTypeDAO.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
+    <Compile Include="DTO\BookRoomDTO.cs" />
     <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\CustomerTypeDTO.cs" />
+    <Compile Include="DTO\ReceiveRoomDetailsDTO.cs" />
+    <Compile Include="DTO\ReceiveRoomDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="DTO\RoomTypeDTO.cs" />
+    <Compile Include="DTO\ServiceDTO.cs" />
+    <Compile Include="DTO\ServiceTypeDTO.cs" />
     <Compile Include="fAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +145,12 @@
     </Compile>
     <Compile Include="fParameter.Designer.cs">
       <DependentUpon>fParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPrintBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrintBill.Designer.cs">
+      <DependentUpon>fPrintBill.cs</DependentUpon>
     </Compile>
     <Compile Include="fProfile.cs">
       <SubType>Form</SubType>
@@ -203,6 +229,9 @@
     <EmbeddedResource Include="fManagement.resx">
       <DependentUpon>fManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fPrintBill.resx">
+      <DependentUpon>fPrintBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fReceiveRoom.resx">
       <DependentUpon>fReceiveRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +254,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

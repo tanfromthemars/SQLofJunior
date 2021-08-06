@@ -60,5 +60,58 @@ namespace HotelManager.DAO
             string query = "USP_UpdateDisplayName @username, @displayname";
             return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { username, displayname }) > 0;
         }
+
+        internal bool UpdatePassword(string username, string password)
+        {
+            string query = "USP_UpdatePassword @username, @password";
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { username, HashPass(password) }) > 0;
+        }
+
+        internal bool UpdateInfo(string username, string address, int phonenumber, string idCard, DateTime dateOfBirth, string sex)
+        {
+            string query = "USP_UpdateInfo @username, @address, @phonenumber, @idcard, @dateOfBirth, @sex";
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { username, address, phonenumber, idCard, dateOfBirth, sex }) > 0;
+        }
+
+        internal AccountDTO GetStaffSetUp(int idBill)
+        {
+            string query = "USP_GetStaffSetUp @idBill";
+            AccountDTO account = new AccountDTO(DataProvider.Instance.ExecuteQuery(query, new object[] { idBill }).Rows[0]);
+            return account;
+        }
+
+        internal DataTable LoadFullStaff()
+        {
+            string query = "USP_LoadFullStaff";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        internal bool InsertAccount(AccountDTO account)
+        {
+            string query = "EXEC USP_InsertStaff @user, @name, @pass, @idStaffType, @idCard, @dateOfBirth, @sex, @address, @phoneNumber, @startDay";
+            object[] parameter = new object[] { account.UserName, account.DisplayName, account.PassWord, account.IdStaffType,
+            account.IdCard, account.DateOfBirth, account.Sex, account.Address, account.PhoneNumber, account.StartDay };
+            return DataProvider.Instance.ExecuteNoneQuery(query, parameter) > 0;
+        }
+
+        internal bool UpdateAccount(AccountDTO account)
+        {
+            string query = "EXEC USP_UpdateStaff @user, @name, @idStaffType, @idCard, @dateOfBirth, @sex, @address, @phoneNumber, @startDay";
+            object[] parameter = new object[] { account.UserName, account.DisplayName, account.PassWord, account.IdStaffType,
+            account.IdCard, account.DateOfBirth, account.Sex, account.Address, account.PhoneNumber, account.StartDay };
+            return DataProvider.Instance.ExecuteNoneQuery(query, parameter) > 0;
+        }
+
+        internal bool ResetPassword(string user, string hashPass)
+        {
+            string query = "USP_UpdatePassword @user, @hashPass";
+            return DataProvider.Instance.ExecuteNoneQuery(query, new object[] { user, hashPass }) > 0;
+        }
+
+        internal DataTable Search(string @string, int phoneNumber)
+        {
+            string query = "USP_SearchStaff @string, @int";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { @string, phoneNumber });
+        }
     }
 }
