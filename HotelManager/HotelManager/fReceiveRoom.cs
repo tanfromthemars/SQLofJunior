@@ -71,7 +71,7 @@ namespace HotelManager
         private void cbRoomType_SelectedIndexChanged(object sender, EventArgs e)
         {
             txbRoomTypeName.Text = (cbRoomType.SelectedItem as RoomTypeDTO).Name;
-            LoadEmptyRoom((cbRoomType.SelectedItem as RoomTypeDTO).Id)
+            LoadEmptyRoom((cbRoomType.SelectedItem as RoomTypeDTO).Id);
         }
         public void LoadEmptyRoom(int idRoomType)
         {
@@ -165,7 +165,7 @@ namespace HotelManager
         }
         public bool InsertReceiveRoom(int idBookRoom, int idRoom)
         {
-            return ReceiveRoomDAO.Instance.InsertReceiveRoom(idBookRoom, idRoom)
+            return ReceiveRoomDAO.Instance.InsertReceiveRoom(idBookRoom, idRoom);
         }
         public bool InsertReceiveRoomDetails(int idReceiveRoom, int idCustomerOther)
         {

@@ -59,16 +59,16 @@ namespace HotelManager
             else
                 MessageBox.Show("Bạn không quyền truy cập.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        private bool CheckAccess(string nameform)
-        {
-            return AccessDAO.Instance.CheckAccess(userName, nameform);
-        }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
             fLogin login = new fLogin();
             login.ShowDialog();
+        }
+        private bool CheckAccess(string nameform)
+        {
+            return AccessDAO.Instance.CheckAccess(userName, nameform);
         }
 
         private void titleRecieveRoom_Click(object sender, EventArgs e)
