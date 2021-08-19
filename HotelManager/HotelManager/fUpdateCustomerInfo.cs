@@ -14,9 +14,11 @@ namespace HotelManager
 {
     public partial class fUpdateCustomerInfo : Form
     {
-        public fUpdateCustomerInfo()
+        string idCard;
+        public fUpdateCustomerInfo(string _idCard)
         {
-            InitializeComponent();            
+            InitializeComponent();
+            idCard = _idCard;
         }
     }
 }
