@@ -211,5 +211,10 @@ namespace HotelManager
             else
                 MessageBox.Show("Bạn không quyền truy cập.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
+
+        private void panelRight_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

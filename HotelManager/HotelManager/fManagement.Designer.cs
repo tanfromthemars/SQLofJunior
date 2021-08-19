@@ -1,5 +1,4 @@
-﻿
-namespace HotelManager
+﻿namespace HotelManager
 {
     partial class fManagement
     {
@@ -33,20 +32,18 @@ namespace HotelManager
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fManagement));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panelRight = new System.Windows.Forms.Panel();
-            this.titleSendRoom = new Bunifu.Framework.UI.BunifuTileButton();
-            this.titleSignUpRoom = new Bunifu.Framework.UI.BunifuTileButton();
             this.btnClose = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.title = new MetroFramework.Controls.MetroTile();
+            this.label2 = new System.Windows.Forms.Label();
             this.metroTile17 = new MetroFramework.Controls.MetroTile();
             this.metroTile16 = new MetroFramework.Controls.MetroTile();
             this.metroTile13 = new MetroFramework.Controls.MetroTile();
-            this.title = new MetroFramework.Controls.MetroTile();
             this.titleManageRoom = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile8 = new MetroFramework.Controls.MetroTile();
             this.titlePay = new MetroFramework.Controls.MetroTile();
             this.titleRecieveRoom = new MetroFramework.Controls.MetroTile();
-            this.label2 = new System.Windows.Forms.Label();
             this.titleBookRoom = new MetroFramework.Controls.MetroTile();
             this.panelLeft = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnNavigationPanel = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -69,8 +66,6 @@ namespace HotelManager
             // panelRight
             // 
             this.panelRight.BackColor = System.Drawing.Color.White;
-            this.panelRight.Controls.Add(this.titleSendRoom);
-            this.panelRight.Controls.Add(this.titleSignUpRoom);
             this.panelRight.Controls.Add(this.btnClose);
             this.panelRight.Controls.Add(this.bunifuSeparator1);
             this.panelRight.Controls.Add(this.metroTile17);
@@ -89,46 +84,7 @@ namespace HotelManager
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(939, 583);
             this.panelRight.TabIndex = 1;
-            // 
-            // titleSendRoom
-            // 
-            this.titleSendRoom.BackColor = System.Drawing.Color.SeaGreen;
-            this.titleSendRoom.color = System.Drawing.Color.SeaGreen;
-            this.titleSendRoom.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.titleSendRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.titleSendRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.titleSendRoom.ForeColor = System.Drawing.Color.White;
-            this.titleSendRoom.Image = ((System.Drawing.Image)(resources.GetObject("titleSendRoom.Image")));
-            this.titleSendRoom.ImagePosition = 20;
-            this.titleSendRoom.ImageZoom = 50;
-            this.titleSendRoom.LabelPosition = 41;
-            this.titleSendRoom.LabelText = "Tile 1";
-            this.titleSendRoom.Location = new System.Drawing.Point(331, 233);
-            this.titleSendRoom.Margin = new System.Windows.Forms.Padding(6);
-            this.titleSendRoom.Name = "titleSendRoom";
-            this.titleSendRoom.Size = new System.Drawing.Size(134, 89);
-            this.titleSendRoom.TabIndex = 56;
-            this.titleSendRoom.Click += new System.EventHandler(this.titleSendRoom_Click);
-            // 
-            // titleSignUpRoom
-            // 
-            this.titleSignUpRoom.BackColor = System.Drawing.Color.SeaGreen;
-            this.titleSignUpRoom.color = System.Drawing.Color.SeaGreen;
-            this.titleSignUpRoom.colorActive = System.Drawing.Color.MediumSeaGreen;
-            this.titleSignUpRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.titleSignUpRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            this.titleSignUpRoom.ForeColor = System.Drawing.Color.White;
-            this.titleSignUpRoom.Image = ((System.Drawing.Image)(resources.GetObject("titleSignUpRoom.Image")));
-            this.titleSignUpRoom.ImagePosition = 20;
-            this.titleSignUpRoom.ImageZoom = 50;
-            this.titleSignUpRoom.LabelPosition = 41;
-            this.titleSignUpRoom.LabelText = "Tile 1";
-            this.titleSignUpRoom.Location = new System.Drawing.Point(29, 171);
-            this.titleSignUpRoom.Margin = new System.Windows.Forms.Padding(6);
-            this.titleSignUpRoom.Name = "titleSignUpRoom";
-            this.titleSignUpRoom.Size = new System.Drawing.Size(128, 129);
-            this.titleSignUpRoom.TabIndex = 56;
-            this.titleSignUpRoom.Click += new System.EventHandler(this.titleSignUpRoom_Click);
+            this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
             // 
             // btnClose
             // 
@@ -155,50 +111,9 @@ namespace HotelManager
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
-            // metroTile17
-            // 
-            this.metroTile17.BackColor = System.Drawing.Color.SeaGreen;
-            this.metroTile17.ForeColor = System.Drawing.Color.White;
-            this.metroTile17.Location = new System.Drawing.Point(330, 377);
-            this.metroTile17.Name = "metroTile17";
-            this.metroTile17.Size = new System.Drawing.Size(276, 135);
-            this.metroTile17.TabIndex = 47;
-            this.metroTile17.Text = "Quản Lí Khách Hàng";
-            this.metroTile17.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile17.UseTileImage = true;
-            this.metroTile17.UseVisualStyleBackColor = false;
-            this.metroTile17.Click += new System.EventHandler(this.metroTile17_Click);
-            // 
-            // metroTile16
-            // 
-            this.metroTile16.BackColor = System.Drawing.Color.SeaGreen;
-            this.metroTile16.ForeColor = System.Drawing.Color.White;
-            this.metroTile16.Location = new System.Drawing.Point(632, 73);
-            this.metroTile16.Name = "metroTile16";
-            this.metroTile16.Size = new System.Drawing.Size(135, 276);
-            this.metroTile16.TabIndex = 44;
-            this.metroTile16.Text = "Quản Lí Hóa Đơn";
-            this.metroTile16.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile16.UseTileImage = true;
-            this.metroTile16.UseVisualStyleBackColor = false;
-            this.metroTile16.Click += new System.EventHandler(this.metroTile16_Click);
-            // 
-            // metroTile13
-            // 
-            this.metroTile13.BackColor = System.Drawing.Color.SeaGreen;
-            this.metroTile13.ForeColor = System.Drawing.Color.White;
-            this.metroTile13.Location = new System.Drawing.Point(632, 377);
-            this.metroTile13.Name = "metroTile13";
-            this.metroTile13.Size = new System.Drawing.Size(276, 135);
-            this.metroTile13.TabIndex = 41;
-            this.metroTile13.Text = "Quy Định";
-            this.metroTile13.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile13.UseTileImage = true;
-            this.metroTile13.UseVisualStyleBackColor = false;
-            this.metroTile13.Click += new System.EventHandler(this.metroTile13_Click);
-            // 
             // title
             // 
+            this.title.ActiveControl = null;
             this.title.BackColor = System.Drawing.Color.SeaGreen;
             this.title.ForeColor = System.Drawing.Color.White;
             this.title.Location = new System.Drawing.Point(330, 73);
@@ -206,80 +121,13 @@ namespace HotelManager
             this.title.Size = new System.Drawing.Size(276, 135);
             this.title.TabIndex = 36;
             this.title.Text = "Thống kê doanh thu";
+            this.title.TileImage = global::HotelManager.Properties.Resources.thongkedoanhthu;
             this.title.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.title.UseCustomBackColor = true;
+            this.title.UseCustomForeColor = true;
+            this.title.UseSelectable = true;
+            this.title.UseStyleColors = true;
             this.title.UseTileImage = true;
-            this.title.UseVisualStyleBackColor = false;
-            this.title.Click += new System.EventHandler(this.title_Click);
-            // 
-            // titleManageRoom
-            // 
-            this.titleManageRoom.BackColor = System.Drawing.Color.SeaGreen;
-            this.titleManageRoom.ForeColor = System.Drawing.Color.White;
-            this.titleManageRoom.Location = new System.Drawing.Point(330, 214);
-            this.titleManageRoom.Name = "titleManageRoom";
-            this.titleManageRoom.Size = new System.Drawing.Size(135, 135);
-            this.titleManageRoom.TabIndex = 34;
-            this.titleManageRoom.Text = "Quản Lí Phòng";
-            this.titleManageRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titleManageRoom.UseTileImage = true;
-            this.titleManageRoom.UseVisualStyleBackColor = false;
-            this.titleManageRoom.Click += new System.EventHandler(this.titleManageRoom_Click);
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.BackColor = System.Drawing.Color.SeaGreen;
-            this.metroTile2.ForeColor = System.Drawing.Color.White;
-            this.metroTile2.Location = new System.Drawing.Point(773, 73);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(135, 276);
-            this.metroTile2.TabIndex = 32;
-            this.metroTile2.Text = "Quản Lí Dịch Vụ";
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.UseTileImage = true;
-            this.metroTile2.UseVisualStyleBackColor = false;
-            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
-            // 
-            // metroTile8
-            // 
-            this.metroTile8.BackColor = System.Drawing.Color.SeaGreen;
-            this.metroTile8.ForeColor = System.Drawing.Color.White;
-            this.metroTile8.Location = new System.Drawing.Point(471, 214);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(135, 135);
-            this.metroTile8.TabIndex = 29;
-            this.metroTile8.Text = "Quản Lí Nhân Viên";
-            this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile8.UseTileImage = true;
-            this.metroTile8.UseVisualStyleBackColor = false;
-            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
-            // 
-            // titlePay
-            // 
-            this.titlePay.BackColor = System.Drawing.Color.SeaGreen;
-            this.titlePay.ForeColor = System.Drawing.Color.White;
-            this.titlePay.Location = new System.Drawing.Point(29, 377);
-            this.titlePay.Name = "titlePay";
-            this.titlePay.Size = new System.Drawing.Size(276, 135);
-            this.titlePay.TabIndex = 27;
-            this.titlePay.Text = "Sử Dụng Dịch Vụ VàThanh Toán";
-            this.titlePay.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titlePay.UseTileImage = true;
-            this.titlePay.UseVisualStyleBackColor = false;
-            this.titlePay.Click += new System.EventHandler(this.titlePay_Click);
-            // 
-            // titleRecieveRoom
-            // 
-            this.titleRecieveRoom.BackColor = System.Drawing.Color.SeaGreen;
-            this.titleRecieveRoom.ForeColor = System.Drawing.Color.White;
-            this.titleRecieveRoom.Location = new System.Drawing.Point(170, 73);
-            this.titleRecieveRoom.Name = "titleRecieveRoom";
-            this.titleRecieveRoom.Size = new System.Drawing.Size(135, 276);
-            this.titleRecieveRoom.TabIndex = 25;
-            this.titleRecieveRoom.Text = "Nhận Phòng";
-            this.titleRecieveRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titleRecieveRoom.UseTileImage = true;
-            this.titleRecieveRoom.UseVisualStyleBackColor = false;
-            this.titleRecieveRoom.Click += new System.EventHandler(this.titleRecieveRoom_Click);
             // 
             // label2
             // 
@@ -292,8 +140,161 @@ namespace HotelManager
             this.label2.TabIndex = 21;
             this.label2.Text = "Quản Lí Khách Sạn";
             // 
+            // metroTile17
+            // 
+            this.metroTile17.ActiveControl = null;
+            this.metroTile17.BackColor = System.Drawing.Color.SeaGreen;
+            this.metroTile17.ForeColor = System.Drawing.Color.White;
+            this.metroTile17.Location = new System.Drawing.Point(330, 377);
+            this.metroTile17.Name = "metroTile17";
+            this.metroTile17.Size = new System.Drawing.Size(276, 135);
+            this.metroTile17.TabIndex = 47;
+            this.metroTile17.Text = "Quản Lí Khách Hàng";
+            this.metroTile17.TileImage = global::HotelManager.Properties.Resources.quanlykhachhang;
+            this.metroTile17.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile17.UseCustomBackColor = true;
+            this.metroTile17.UseCustomForeColor = true;
+            this.metroTile17.UseSelectable = true;
+            this.metroTile17.UseStyleColors = true;
+            this.metroTile17.UseTileImage = true;
+            this.metroTile17.Click += new System.EventHandler(this.metroTile17_Click);
+            // 
+            // metroTile16
+            // 
+            this.metroTile16.ActiveControl = null;
+            this.metroTile16.BackColor = System.Drawing.Color.SeaGreen;
+            this.metroTile16.ForeColor = System.Drawing.Color.White;
+            this.metroTile16.Location = new System.Drawing.Point(632, 73);
+            this.metroTile16.Name = "metroTile16";
+            this.metroTile16.Size = new System.Drawing.Size(135, 276);
+            this.metroTile16.TabIndex = 44;
+            this.metroTile16.Text = "Quản Lí Hóa Đơn";
+            this.metroTile16.TileImage = global::HotelManager.Properties.Resources.quanlyhoadon;
+            this.metroTile16.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile16.UseCustomBackColor = true;
+            this.metroTile16.UseCustomForeColor = true;
+            this.metroTile16.UseSelectable = true;
+            this.metroTile16.UseStyleColors = true;
+            this.metroTile16.UseTileImage = true;
+            this.metroTile16.Click += new System.EventHandler(this.metroTile16_Click);
+            // 
+            // metroTile13
+            // 
+            this.metroTile13.ActiveControl = null;
+            this.metroTile13.BackColor = System.Drawing.Color.SeaGreen;
+            this.metroTile13.ForeColor = System.Drawing.Color.White;
+            this.metroTile13.Location = new System.Drawing.Point(632, 377);
+            this.metroTile13.Name = "metroTile13";
+            this.metroTile13.Size = new System.Drawing.Size(276, 135);
+            this.metroTile13.TabIndex = 41;
+            this.metroTile13.Text = "Quy Định";
+            this.metroTile13.TileImage = global::HotelManager.Properties.Resources.quydinh;
+            this.metroTile13.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile13.UseCustomBackColor = true;
+            this.metroTile13.UseCustomForeColor = true;
+            this.metroTile13.UseSelectable = true;
+            this.metroTile13.UseStyleColors = true;
+            this.metroTile13.UseTileImage = true;
+            this.metroTile13.Click += new System.EventHandler(this.metroTile13_Click);
+            // 
+            // titleManageRoom
+            // 
+            this.titleManageRoom.ActiveControl = null;
+            this.titleManageRoom.BackColor = System.Drawing.Color.SeaGreen;
+            this.titleManageRoom.ForeColor = System.Drawing.Color.White;
+            this.titleManageRoom.Location = new System.Drawing.Point(330, 214);
+            this.titleManageRoom.Name = "titleManageRoom";
+            this.titleManageRoom.Size = new System.Drawing.Size(135, 135);
+            this.titleManageRoom.TabIndex = 34;
+            this.titleManageRoom.Text = "Quản Lí Phòng";
+            this.titleManageRoom.TileImage = global::HotelManager.Properties.Resources.quanlyphong;
+            this.titleManageRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleManageRoom.UseCustomBackColor = true;
+            this.titleManageRoom.UseCustomForeColor = true;
+            this.titleManageRoom.UseSelectable = true;
+            this.titleManageRoom.UseStyleColors = true;
+            this.titleManageRoom.UseTileImage = true;
+            this.titleManageRoom.Click += new System.EventHandler(this.titleManageRoom_Click);
+            // 
+            // metroTile2
+            // 
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.BackColor = System.Drawing.Color.SeaGreen;
+            this.metroTile2.ForeColor = System.Drawing.Color.White;
+            this.metroTile2.Location = new System.Drawing.Point(773, 73);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(135, 276);
+            this.metroTile2.TabIndex = 32;
+            this.metroTile2.Text = "Quản Lí Dịch Vụ";
+            this.metroTile2.TileImage = global::HotelManager.Properties.Resources.quanlydichvu;
+            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile2.UseCustomBackColor = true;
+            this.metroTile2.UseCustomForeColor = true;
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.UseStyleColors = true;
+            this.metroTile2.UseTileImage = true;
+            this.metroTile2.Click += new System.EventHandler(this.metroTile2_Click);
+            // 
+            // metroTile8
+            // 
+            this.metroTile8.ActiveControl = null;
+            this.metroTile8.BackColor = System.Drawing.Color.SeaGreen;
+            this.metroTile8.ForeColor = System.Drawing.Color.White;
+            this.metroTile8.Location = new System.Drawing.Point(471, 214);
+            this.metroTile8.Name = "metroTile8";
+            this.metroTile8.Size = new System.Drawing.Size(135, 135);
+            this.metroTile8.TabIndex = 29;
+            this.metroTile8.Text = "Quản Lí Nhân Viên";
+            this.metroTile8.TileImage = global::HotelManager.Properties.Resources.quanlynhanvien;
+            this.metroTile8.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTile8.UseCustomBackColor = true;
+            this.metroTile8.UseCustomForeColor = true;
+            this.metroTile8.UseSelectable = true;
+            this.metroTile8.UseStyleColors = true;
+            this.metroTile8.UseTileImage = true;
+            this.metroTile8.Click += new System.EventHandler(this.metroTile8_Click);
+            // 
+            // titlePay
+            // 
+            this.titlePay.ActiveControl = null;
+            this.titlePay.BackColor = System.Drawing.Color.SeaGreen;
+            this.titlePay.ForeColor = System.Drawing.Color.White;
+            this.titlePay.Location = new System.Drawing.Point(29, 377);
+            this.titlePay.Name = "titlePay";
+            this.titlePay.Size = new System.Drawing.Size(276, 135);
+            this.titlePay.TabIndex = 27;
+            this.titlePay.Text = "Sử Dụng Dịch Vụ VàThanh Toán";
+            this.titlePay.TileImage = global::HotelManager.Properties.Resources.sudungdichvuvathanhtoan;
+            this.titlePay.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titlePay.UseCustomBackColor = true;
+            this.titlePay.UseCustomForeColor = true;
+            this.titlePay.UseSelectable = true;
+            this.titlePay.UseStyleColors = true;
+            this.titlePay.UseTileImage = true;
+            this.titlePay.Click += new System.EventHandler(this.titlePay_Click);
+            // 
+            // titleRecieveRoom
+            // 
+            this.titleRecieveRoom.ActiveControl = null;
+            this.titleRecieveRoom.BackColor = System.Drawing.Color.SeaGreen;
+            this.titleRecieveRoom.ForeColor = System.Drawing.Color.White;
+            this.titleRecieveRoom.Location = new System.Drawing.Point(170, 73);
+            this.titleRecieveRoom.Name = "titleRecieveRoom";
+            this.titleRecieveRoom.Size = new System.Drawing.Size(135, 276);
+            this.titleRecieveRoom.TabIndex = 25;
+            this.titleRecieveRoom.Text = "Nhận Phòng";
+            this.titleRecieveRoom.TileImage = global::HotelManager.Properties.Resources.nhanphong;
+            this.titleRecieveRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleRecieveRoom.UseCustomBackColor = true;
+            this.titleRecieveRoom.UseCustomForeColor = true;
+            this.titleRecieveRoom.UseSelectable = true;
+            this.titleRecieveRoom.UseStyleColors = true;
+            this.titleRecieveRoom.UseTileImage = true;
+            this.titleRecieveRoom.Click += new System.EventHandler(this.titleRecieveRoom_Click);
+            // 
             // titleBookRoom
             // 
+            this.titleBookRoom.ActiveControl = null;
             this.titleBookRoom.BackColor = System.Drawing.Color.SeaGreen;
             this.titleBookRoom.ForeColor = System.Drawing.Color.White;
             this.titleBookRoom.Location = new System.Drawing.Point(29, 73);
@@ -301,9 +302,13 @@ namespace HotelManager
             this.titleBookRoom.Size = new System.Drawing.Size(135, 276);
             this.titleBookRoom.TabIndex = 17;
             this.titleBookRoom.Text = "Đặt Phòng";
+            this.titleBookRoom.TileImage = ((System.Drawing.Image)(resources.GetObject("titleBookRoom.TileImage")));
             this.titleBookRoom.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleBookRoom.UseCustomBackColor = true;
+            this.titleBookRoom.UseCustomForeColor = true;
+            this.titleBookRoom.UseSelectable = true;
+            this.titleBookRoom.UseStyleColors = true;
             this.titleBookRoom.UseTileImage = true;
-            this.titleBookRoom.UseVisualStyleBackColor = false;
             // 
             // panelLeft
             // 
@@ -587,7 +592,5 @@ namespace HotelManager
         private Bunifu.Framework.UI.BunifuFlatButton btnNavigationPanel;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Button btnClose;
-        private Bunifu.Framework.UI.BunifuTileButton titleSignUpRoom;
-        private Bunifu.Framework.UI.BunifuTileButton titleSendRoom;
     }
 }

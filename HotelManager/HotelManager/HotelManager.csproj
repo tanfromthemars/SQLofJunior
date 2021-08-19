@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>HotelManager</RootNamespace>
     <AssemblyName>HotelManager</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -268,6 +268,35 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\datphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nhanphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sudungdichvuvathanhtoan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlyphong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlynhanvien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlykhachhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlyhoadon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quanlydichvu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quydinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thongkedoanhthu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
