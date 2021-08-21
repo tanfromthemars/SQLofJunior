@@ -147,6 +147,7 @@ namespace HotelManager
             this.cbNationality.Size = new System.Drawing.Size(203, 29);
             this.cbNationality.Style = MetroFramework.MetroColorStyle.Green;
             this.cbNationality.TabIndex = 53;
+            this.cbNationality.UseSelectable = true;
             // 
             // dpkDateOfBirth
             // 
@@ -184,6 +185,7 @@ namespace HotelManager
             this.cbCustomerType.Name = "cbCustomerType";
             this.cbCustomerType.Size = new System.Drawing.Size(203, 29);
             this.cbCustomerType.TabIndex = 42;
+            this.cbCustomerType.UseSelectable = true;
             // 
             // label20
             // 
@@ -218,7 +220,7 @@ namespace HotelManager
             this.txbAddress.BorderThickness = 1;
             this.txbAddress.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbAddress.isPassword = false;
             this.txbAddress.Location = new System.Drawing.Point(240, 101);
@@ -255,6 +257,7 @@ namespace HotelManager
             this.cbSex.Size = new System.Drawing.Size(203, 29);
             this.cbSex.Style = MetroFramework.MetroColorStyle.Green;
             this.cbSex.TabIndex = 26;
+            this.cbSex.UseSelectable = true;
             // 
             // label12
             // 
@@ -286,7 +289,7 @@ namespace HotelManager
             this.txbPhoneNumber.BorderThickness = 1;
             this.txbPhoneNumber.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbPhoneNumber.isPassword = false;
             this.txbPhoneNumber.Location = new System.Drawing.Point(10, 207);
@@ -296,6 +299,7 @@ namespace HotelManager
             this.txbPhoneNumber.Size = new System.Drawing.Size(203, 29);
             this.txbPhoneNumber.TabIndex = 24;
             this.txbPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
             // 
             // label14
             // 
@@ -316,7 +320,7 @@ namespace HotelManager
             this.txbIDCard.BorderThickness = 1;
             this.txbIDCard.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbIDCard.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbIDCard.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbIDCard.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbIDCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbIDCard.isPassword = false;
             this.txbIDCard.Location = new System.Drawing.Point(10, 99);
@@ -346,7 +350,7 @@ namespace HotelManager
             this.txbFullName.BorderThickness = 1;
             this.txbFullName.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbFullName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbFullName.isPassword = false;
             this.txbFullName.Location = new System.Drawing.Point(10, 46);
@@ -406,6 +410,7 @@ namespace HotelManager
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 51;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
             // 
             // btnAddCustomer
             // 
@@ -431,6 +436,7 @@ namespace HotelManager
             this.btnAddCustomer.Size = new System.Drawing.Size(203, 40);
             this.btnAddCustomer.TabIndex = 48;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // bunifuThinButton21
             // 
@@ -456,6 +462,7 @@ namespace HotelManager
             this.bunifuThinButton21.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton21.TabIndex = 50;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // fUpdateCustomerInfo
             // 
