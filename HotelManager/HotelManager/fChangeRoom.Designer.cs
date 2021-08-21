@@ -124,6 +124,7 @@ namespace HotelManager
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 51;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
             // 
             // btnAddCustomer
             // 
@@ -149,6 +150,7 @@ namespace HotelManager
             this.btnAddCustomer.Size = new System.Drawing.Size(203, 40);
             this.btnAddCustomer.TabIndex = 48;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // groupBox3
             // 
@@ -176,6 +178,8 @@ namespace HotelManager
             this.cbRoom.Size = new System.Drawing.Size(203, 29);
             this.cbRoom.Style = MetroFramework.MetroColorStyle.Green;
             this.cbRoom.TabIndex = 54;
+            this.cbRoom.UseSelectable = true;
+            this.cbRoom.SelectedIndexChanged += new System.EventHandler(this.cbRoom_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -190,7 +194,7 @@ namespace HotelManager
             // 
             // cbRoomType
             // 
-            this.cbRoomType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbRoomType.BackColor = System.Drawing.Color.White;
             this.cbRoomType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbRoomType.FormattingEnabled = true;
             this.cbRoomType.ItemHeight = 23;
@@ -199,6 +203,11 @@ namespace HotelManager
             this.cbRoomType.Size = new System.Drawing.Size(203, 29);
             this.cbRoomType.Style = MetroFramework.MetroColorStyle.Green;
             this.cbRoomType.TabIndex = 52;
+            this.cbRoomType.UseCustomBackColor = true;
+            this.cbRoomType.UseCustomForeColor = true;
+            this.cbRoomType.UseSelectable = true;
+            this.cbRoomType.UseStyleColors = true;
+            this.cbRoomType.SelectedIndexChanged += new System.EventHandler(this.cbRoomType_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -254,7 +263,7 @@ namespace HotelManager
             this.txbPrice.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbPrice.Enabled = false;
-            this.txbPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbPrice.isPassword = false;
             this.txbPrice.Location = new System.Drawing.Point(26, 206);
@@ -285,7 +294,7 @@ namespace HotelManager
             this.txbLimitPerson.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbLimitPerson.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbLimitPerson.Enabled = false;
-            this.txbLimitPerson.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbLimitPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbLimitPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbLimitPerson.isPassword = false;
             this.txbLimitPerson.Location = new System.Drawing.Point(26, 152);
@@ -316,7 +325,7 @@ namespace HotelManager
             this.txbRoomTypeName.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbRoomTypeName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbRoomTypeName.Enabled = false;
-            this.txbRoomTypeName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbRoomTypeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbRoomTypeName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbRoomTypeName.isPassword = false;
             this.txbRoomTypeName.Location = new System.Drawing.Point(26, 99);
@@ -347,7 +356,7 @@ namespace HotelManager
             this.txbRoomName.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbRoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbRoomName.Enabled = false;
-            this.txbRoomName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txbRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txbRoomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbRoomName.isPassword = false;
             this.txbRoomName.Location = new System.Drawing.Point(26, 46);
