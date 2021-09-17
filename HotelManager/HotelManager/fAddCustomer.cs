@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace HotelManager
 {
-    public partial class fRoom : Form
+    public partial class fAddCustomer : Form
     {
-        private fRoomType
-        public fRoom()
+        public fAddCustomer()
         {
             InitializeComponent();
         }

@@ -14,9 +14,26 @@ namespace HotelManager
 {
     public partial class fBookRoomDetails : Form
     {
+        int idBookRoom;
+        string idCard;
         public fBookRoomDetails(int _idBookRoom, string _idCard)
         {
+            idBookRoom = _idBookRoom;
+            idCard = _idCard;
             InitializeComponent();
+            LoadRoomType();
+            LoadCustomerType();
+        }
+
+        private void LoadCustomerType()
+        {
+            cbCustomerType.DataSource = CustomerTypeDAO.Instance.LoadListCustomerType();
+        }
+
+        private void LoadRoomType()
+        {
+            cbRoomType.DataSource = RoomTypeDAO.Instance.LoadListRoomType();
+            cbRoomType.DisplayMember = "Name";
         }
     }
 }

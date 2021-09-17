@@ -167,6 +167,7 @@ namespace HotelManager
             this.txbNationality.Size = new System.Drawing.Size(179, 29);
             this.txbNationality.Style = MetroFramework.MetroColorStyle.Green;
             this.txbNationality.TabIndex = 58;
+            this.txbNationality.UseSelectable = true;
             // 
             // label14
             // 
@@ -185,12 +186,14 @@ namespace HotelManager
             this.txbAddress.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbAddress.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbAddress.BorderThickness = 1;
+            this.txbAddress.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbAddress.isPassword = false;
             this.txbAddress.Location = new System.Drawing.Point(216, 155);
             this.txbAddress.Margin = new System.Windows.Forms.Padding(0);
+            this.txbAddress.MaxLength = 32767;
             this.txbAddress.Name = "txbAddress";
             this.txbAddress.Size = new System.Drawing.Size(175, 29);
             this.txbAddress.TabIndex = 53;
@@ -202,12 +205,14 @@ namespace HotelManager
             this.txbPhoneNumber.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbPhoneNumber.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbPhoneNumber.BorderThickness = 1;
+            this.txbPhoneNumber.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPhoneNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbPhoneNumber.isPassword = false;
             this.txbPhoneNumber.Location = new System.Drawing.Point(216, 99);
             this.txbPhoneNumber.Margin = new System.Windows.Forms.Padding(0);
+            this.txbPhoneNumber.MaxLength = 32767;
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.Size = new System.Drawing.Size(175, 29);
             this.txbPhoneNumber.TabIndex = 52;
@@ -251,6 +256,7 @@ namespace HotelManager
             this.comboBoxSex.Size = new System.Drawing.Size(175, 29);
             this.comboBoxSex.Style = MetroFramework.MetroColorStyle.Green;
             this.comboBoxSex.TabIndex = 4;
+            this.comboBoxSex.UseSelectable = true;
             // 
             // comboBoxCustomerType
             // 
@@ -264,6 +270,7 @@ namespace HotelManager
             this.comboBoxCustomerType.Size = new System.Drawing.Size(175, 29);
             this.comboBoxCustomerType.Style = MetroFramework.MetroColorStyle.Green;
             this.comboBoxCustomerType.TabIndex = 3;
+            this.comboBoxCustomerType.UseSelectable = true;
             // 
             // comboboxID
             // 
@@ -274,6 +281,7 @@ namespace HotelManager
             this.comboboxID.Size = new System.Drawing.Size(175, 29);
             this.comboboxID.Style = MetroFramework.MetroColorStyle.Green;
             this.comboboxID.TabIndex = 0;
+            this.comboboxID.UseSelectable = true;
             // 
             // label2
             // 
@@ -292,12 +300,14 @@ namespace HotelManager
             this.txbFullName.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbFullName.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbFullName.BorderThickness = 1;
+            this.txbFullName.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbFullName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbFullName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbFullName.isPassword = false;
             this.txbFullName.Location = new System.Drawing.Point(12, 99);
             this.txbFullName.Margin = new System.Windows.Forms.Padding(0);
+            this.txbFullName.MaxLength = 32767;
             this.txbFullName.Name = "txbFullName";
             this.txbFullName.Size = new System.Drawing.Size(175, 29);
             this.txbFullName.TabIndex = 1;
@@ -368,12 +378,14 @@ namespace HotelManager
             this.txbIDCard.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbIDCard.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbIDCard.BorderThickness = 1;
+            this.txbIDCard.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbIDCard.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbIDCard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbIDCard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbIDCard.isPassword = false;
             this.txbIDCard.Location = new System.Drawing.Point(12, 155);
             this.txbIDCard.Margin = new System.Windows.Forms.Padding(0);
+            this.txbIDCard.MaxLength = 32767;
             this.txbIDCard.Name = "txbIDCard";
             this.txbIDCard.Size = new System.Drawing.Size(175, 29);
             this.txbIDCard.TabIndex = 2;
@@ -593,7 +605,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveFirstItem.AutoSize = false;
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(50, 22);
@@ -604,7 +615,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMovePreviousItem.AutoSize = false;
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(50, 22);
@@ -620,6 +630,7 @@ namespace HotelManager
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 25);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -634,7 +645,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveNextItem.AutoSize = false;
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(50, 22);
@@ -645,7 +655,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveLastItem.AutoSize = false;
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(50, 22);
@@ -658,6 +667,7 @@ namespace HotelManager
             this.toolStripLabel1.Size = new System.Drawing.Size(34, 40);
             this.toolStripLabel1.Text = "Xuất";
             this.toolStripLabel1.ToolTipText = "Xuất";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // groupBox3
             // 
@@ -691,6 +701,7 @@ namespace HotelManager
             this.cbCustomerSearch.Size = new System.Drawing.Size(175, 29);
             this.cbCustomerSearch.Style = MetroFramework.MetroColorStyle.Green;
             this.cbCustomerSearch.TabIndex = 50;
+            this.cbCustomerSearch.UseSelectable = true;
             // 
             // txbSearch
             // 
@@ -698,16 +709,19 @@ namespace HotelManager
             this.txbSearch.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbSearch.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbSearch.BorderThickness = 1;
+            this.txbSearch.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbSearch.isPassword = false;
             this.txbSearch.Location = new System.Drawing.Point(220, 26);
             this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSearch.MaxLength = 32767;
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.Size = new System.Drawing.Size(175, 29);
             this.txbSearch.TabIndex = 0;
             this.txbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // label5
             // 
@@ -743,6 +757,7 @@ namespace HotelManager
             this.btnSearch.Size = new System.Drawing.Size(175, 40);
             this.btnSearch.TabIndex = 46;
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnCancel
             // 
@@ -769,6 +784,7 @@ namespace HotelManager
             this.btnCancel.TabIndex = 49;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // SaveCustomer
             // 
@@ -815,6 +831,7 @@ namespace HotelManager
             this.btnClose1.TabIndex = 52;
             this.btnClose1.TabStop = false;
             this.btnClose1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose1.Click += new System.EventHandler(this.btnClose1_Click);
             // 
             // btnUpdate
             // 
@@ -841,6 +858,7 @@ namespace HotelManager
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAddCustomer
             // 
@@ -867,6 +885,7 @@ namespace HotelManager
             this.btnAddCustomer.TabIndex = 8;
             this.btnAddCustomer.TabStop = false;
             this.btnAddCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // label6
             // 
@@ -906,6 +925,7 @@ namespace HotelManager
             this.btnClose.TabIndex = 26;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // fCustomer
             // 
@@ -924,11 +944,11 @@ namespace HotelManager
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.SeaGreen;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "fCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fCustomer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fCustomer_FormClosing);
             this.groupCustomer.ResumeLayout(false);
             this.groupCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
@@ -941,6 +961,7 @@ namespace HotelManager
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
         #endregion
 

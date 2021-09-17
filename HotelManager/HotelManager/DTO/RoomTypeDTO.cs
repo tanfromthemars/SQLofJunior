@@ -14,6 +14,8 @@ namespace HotelManager.DTO
         private int price;
         private int limitPerson;
 
+        public RoomTypeDTO() { }
+
         public RoomTypeDTO(int id, string name, int price, int limitPerson)
         {
             this.id = id;

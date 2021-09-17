@@ -46,6 +46,10 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +72,7 @@
     <Compile Include="DAO\CustomerTypeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DateTable.cs" />
+    <Compile Include="DAO\ExportToExcel.cs" />
     <Compile Include="DAO\ReceiveRoomDAO.cs" />
     <Compile Include="DAO\ReceiveRoomDetailsDAO.cs" />
     <Compile Include="DAO\ReportDAO.cs" />
@@ -91,6 +96,12 @@
     </Compile>
     <Compile Include="fAbout.Designer.cs">
       <DependentUpon>fAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddCustomer.Designer.cs">
+      <DependentUpon>fAddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="fAddCustomerInfo.cs">
       <SubType>Form</SubType>
@@ -182,6 +193,12 @@
     <Compile Include="fRoom.Designer.cs">
       <DependentUpon>fRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="fRoomType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="fRoomType.Designer.cs">
+      <DependentUpon>fRoomType.cs</DependentUpon>
+    </Compile>
     <Compile Include="fService.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fChangeRoom.resx">
       <DependentUpon>fChangeRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCustomer.resx">
+      <DependentUpon>fCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
