@@ -68,5 +68,92 @@ namespace HotelManager
             cbRoomType.DataSource = RoomTypeDAO.Instance.LoadListRoomType();
             cbRoomType.DisplayMember = "Name";
         }
+
+        public bool IsIdCardExists(string idCard)
+        {
+            return CustomerDAO.Instance.IsIdCardExists(idCard);
+        }
+
+        public void UpdateCustomer()
+        {
+            int idCustomerType = (cbCustomerType.SelectedItem as CustomerTypeDTO).Id;
+            CustomerDAO.Instance.UpdateCustomer(CustomerDAO.Instance.GetInfoByIdCard(idCard).Id, txbFullName.Text, txbIDCard.Text, idCustomerType, int.Parse(txbPhoneNumber.Text),
+                dpkDateOfBirth.Value, txbAddress.Text, cbSex.Text, cbNationality.Text);
+        }
+
+        private void btnClose__Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void dpkDateCheckIn_onValueChanged(object sender, EventArgs e)
+        {
+            if (dpkDateCheckIn.Value <= DateTime.Now)
+                LoadData();
+            if (dpkDateCheckOut.Value <= dpkDateCheckIn.Value)
+                LoadData();
+            LoadDays();
+        }
+
+        private void dpkDateCheckOut_onValueChanged(object sender, EventArgs e)
+        {
+            if (dpkDateCheckOut.Value <= DateTime.Now)
+                LoadData();
+            if (dpkDateCheckOut.Value <= dpkDateCheckIn.Value)
+                LoadData();
+            LoadDays();
+        }
+
+        public void ClearData()
+        {
+            txbIDCard.Text = txbFullName.Text = txbAddress.Text = txbPhoneNumber.Text = cbNationality.Text = String.Empty;
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            if (txbFullName.Text != string.Empty && txbIDCard.Text != string.Empty && txbAddress.Text != string.Empty && cbNationality.Text != string.Empty
+                && txbPhoneNumber.Text != string.Empty)
+            {
+                if (!IsIdCardExists(txbIDCard.Text) || txbIDCard.Text == idCard)
+                {
+                    UpdateCustomer();
+                }
+                else
+                    MessageBox.Show("Thẻ căn cước/ CMND không hợp lệ.\nVui lòng nhập lại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            MessageBox.Show("Cập nhật thông tin khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadData();
+        }
+
+        private void txbPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            BookRoomDAO.Instance.UpdateBookRoom(idBookRoom, (cbRoomType.SelectedItem as RoomTypeDTO).Id, dpkDateCheckIn.Value, dpkDateCheckOut.Value);
+            MessageBox.Show("Cập nhật thông tin đặt phòng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadData();
+        }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Xóa khách hàng đồng thời cùng phiếu đặt phòng!\nBạn có muốn tiếp tục?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                if (BookRoomDAO.Instance.IsIDBookRoomExists(idBookRoom))
+                {
+                    BookRoomDAO.Instance.DeleteBookRoom(idBookRoom);
+                    MessageBox.Show("Xóa thông tin khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Xóa thông tin khách hàng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+        }
     }
 }

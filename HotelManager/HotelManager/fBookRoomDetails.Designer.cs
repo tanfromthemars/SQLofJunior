@@ -147,6 +147,7 @@ namespace HotelManager
             this.bunifuThinButton22.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton22.TabIndex = 58;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // txbDays
             // 
@@ -190,6 +191,7 @@ namespace HotelManager
             this.cbRoomType.Size = new System.Drawing.Size(203, 29);
             this.cbRoomType.Style = MetroFramework.MetroColorStyle.Green;
             this.cbRoomType.TabIndex = 55;
+            this.cbRoomType.UseSelectable = true;
             // 
             // dpkDateCheckOut
             // 
@@ -205,6 +207,7 @@ namespace HotelManager
             this.dpkDateCheckOut.Size = new System.Drawing.Size(202, 29);
             this.dpkDateCheckOut.TabIndex = 54;
             this.dpkDateCheckOut.Value = new System.DateTime(2018, 2, 23, 23, 29, 57, 962);
+            this.dpkDateCheckOut.onValueChanged += new System.EventHandler(this.dpkDateCheckOut_onValueChanged);
             // 
             // label15
             // 
@@ -231,6 +234,7 @@ namespace HotelManager
             this.dpkDateCheckIn.Size = new System.Drawing.Size(202, 29);
             this.dpkDateCheckIn.TabIndex = 53;
             this.dpkDateCheckIn.Value = new System.DateTime(2018, 2, 23, 23, 29, 57, 962);
+            this.dpkDateCheckIn.onValueChanged += new System.EventHandler(this.dpkDateCheckIn_onValueChanged);
             // 
             // txbIDBookRoom
             // 
@@ -309,6 +313,7 @@ namespace HotelManager
             this.btnClose_.Size = new System.Drawing.Size(203, 40);
             this.btnClose_.TabIndex = 48;
             this.btnClose_.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose_.Click += new System.EventHandler(this.btnClose__Click);
             // 
             // groupBox2
             // 
@@ -365,6 +370,7 @@ namespace HotelManager
             this.bunifuThinButton23.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton23.TabIndex = 52;
             this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
             // 
             // bunifuThinButton21
             // 
@@ -390,6 +396,7 @@ namespace HotelManager
             this.bunifuThinButton21.Size = new System.Drawing.Size(203, 40);
             this.bunifuThinButton21.TabIndex = 51;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // dpkDateOfBirth
             // 
@@ -434,6 +441,7 @@ namespace HotelManager
             this.cbNationality.Size = new System.Drawing.Size(203, 29);
             this.cbNationality.Style = MetroFramework.MetroColorStyle.Green;
             this.cbNationality.TabIndex = 49;
+            this.cbNationality.UseSelectable = true;
             // 
             // label6
             // 
@@ -457,6 +465,7 @@ namespace HotelManager
             this.cbCustomerType.Size = new System.Drawing.Size(203, 29);
             this.cbCustomerType.Style = MetroFramework.MetroColorStyle.Green;
             this.cbCustomerType.TabIndex = 42;
+            this.cbCustomerType.UseSelectable = true;
             // 
             // label20
             // 
@@ -528,6 +537,7 @@ namespace HotelManager
             this.cbSex.Size = new System.Drawing.Size(203, 29);
             this.cbSex.Style = MetroFramework.MetroColorStyle.Green;
             this.cbSex.TabIndex = 26;
+            this.cbSex.UseSelectable = true;
             // 
             // label12
             // 
@@ -569,6 +579,7 @@ namespace HotelManager
             this.txbPhoneNumber.Size = new System.Drawing.Size(203, 29);
             this.txbPhoneNumber.TabIndex = 24;
             this.txbPhoneNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPhoneNumber_KeyPress);
             // 
             // label14
             // 
