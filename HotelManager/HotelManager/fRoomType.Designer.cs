@@ -30,17 +30,14 @@ namespace HotelManager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRoomType));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txbSearch = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewRoomType = new System.Windows.Forms.DataGridView();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,12 +67,13 @@ namespace HotelManager
             this.comboboxID = new MetroFramework.Controls.MetroComboBox();
             this.txbLimitPerson = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnClose = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.labelName = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.saveRoomType = new System.Windows.Forms.SaveFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.btnClose = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRoomType)).BeginInit();
@@ -84,20 +82,6 @@ namespace HotelManager
             this.groupRoomType.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(760, 5);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(16, 16);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuImageButton1.TabIndex = 37;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
             // 
             // groupBox3
             // 
@@ -120,16 +104,19 @@ namespace HotelManager
             this.txbSearch.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbSearch.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbSearch.BorderThickness = 1;
+            this.txbSearch.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbSearch.isPassword = false;
             this.txbSearch.Location = new System.Drawing.Point(23, 51);
             this.txbSearch.Margin = new System.Windows.Forms.Padding(5);
+            this.txbSearch.MaxLength = 32767;
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.Size = new System.Drawing.Size(175, 29);
             this.txbSearch.TabIndex = 0;
             this.txbSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSearch_KeyPress);
             // 
             // label5
             // 
@@ -141,57 +128,6 @@ namespace HotelManager
             this.label5.Size = new System.Drawing.Size(142, 20);
             this.label5.TabIndex = 28;
             this.label5.Text = "Mã/ Tên loại phòng:";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.ActiveBorderThickness = 1;
-            this.btnSearch.ActiveCornerRadius = 20;
-            this.btnSearch.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.ActiveForecolor = System.Drawing.Color.White;
-            this.btnSearch.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.ButtonText = "Tìm Kiếm";
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.IdleBorderThickness = 1;
-            this.btnSearch.IdleCornerRadius = 20;
-            this.btnSearch.IdleFillColor = System.Drawing.Color.White;
-            this.btnSearch.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSearch.Location = new System.Drawing.Point(23, 91);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(175, 40);
-            this.btnSearch.TabIndex = 46;
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.ActiveBorderThickness = 1;
-            this.btnCancel.ActiveCornerRadius = 20;
-            this.btnCancel.ActiveFillColor = System.Drawing.Color.Red;
-            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCancel.ActiveLineColor = System.Drawing.Color.Red;
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.ButtonText = "Huỷ Tìm";
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCancel.IdleBorderThickness = 1;
-            this.btnCancel.IdleCornerRadius = 20;
-            this.btnCancel.IdleFillColor = System.Drawing.Color.White;
-            this.btnCancel.IdleForecolor = System.Drawing.Color.Red;
-            this.btnCancel.IdleLineColor = System.Drawing.Color.Red;
-            this.btnCancel.Location = new System.Drawing.Point(23, 90);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(175, 40);
-            this.btnCancel.TabIndex = 48;
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Visible = false;
             // 
             // groupBox1
             // 
@@ -213,14 +149,14 @@ namespace HotelManager
             this.dataGridViewRoomType.AllowUserToResizeRows = false;
             this.dataGridViewRoomType.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRoomType.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRoomType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridViewRoomType.ColumnHeadersHeight = 29;
             this.dataGridViewRoomType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRoomType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -229,36 +165,37 @@ namespace HotelManager
             this.colLimitPerson,
             this.colPrice,
             this.col});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRoomType.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRoomType.DefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridViewRoomType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRoomType.GridColor = System.Drawing.Color.White;
             this.dataGridViewRoomType.Location = new System.Drawing.Point(3, 50);
             this.dataGridViewRoomType.Name = "dataGridViewRoomType";
             this.dataGridViewRoomType.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRoomType.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRoomType.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridViewRoomType.RowHeadersVisible = false;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            this.dataGridViewRoomType.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            this.dataGridViewRoomType.RowsDefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridViewRoomType.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewRoomType.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewRoomType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRoomType.Size = new System.Drawing.Size(539, 488);
             this.dataGridViewRoomType.TabIndex = 28;
+            this.dataGridViewRoomType.SelectionChanged += new System.EventHandler(this.dataGridViewRoomType_SelectionChanged);
             // 
             // colID
             // 
@@ -342,7 +279,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveFirstItem.AutoSize = false;
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(30, 22);
@@ -352,7 +288,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMovePreviousItem.AutoSize = false;
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(30, 22);
@@ -367,6 +302,7 @@ namespace HotelManager
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(58, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -381,7 +317,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveNextItem.AutoSize = false;
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(30, 22);
@@ -391,7 +326,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveLastItem.AutoSize = false;
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(30, 22);
@@ -407,6 +341,7 @@ namespace HotelManager
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(31, 22);
             this.toolStripLabel1.Text = "Xuất";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // bunifuDragControl1
             // 
@@ -432,16 +367,20 @@ namespace HotelManager
             this.txbName.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbName.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbName.BorderThickness = 1;
+            this.txbName.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbName.isPassword = false;
             this.txbName.Location = new System.Drawing.Point(19, 102);
             this.txbName.Margin = new System.Windows.Forms.Padding(0);
+            this.txbName.MaxLength = 32767;
             this.txbName.Name = "txbName";
             this.txbName.Size = new System.Drawing.Size(175, 29);
             this.txbName.TabIndex = 0;
             this.txbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbName.Enter += new System.EventHandler(this.txbName_Enter);
+            this.txbName.Leave += new System.EventHandler(this.txbName_Leave);
             // 
             // label1
             // 
@@ -460,16 +399,21 @@ namespace HotelManager
             this.txbPrice.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbPrice.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbPrice.BorderThickness = 1;
+            this.txbPrice.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbPrice.isPassword = false;
             this.txbPrice.Location = new System.Drawing.Point(19, 220);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(0);
+            this.txbPrice.MaxLength = 32767;
             this.txbPrice.Name = "txbPrice";
             this.txbPrice.Size = new System.Drawing.Size(175, 29);
             this.txbPrice.TabIndex = 2;
             this.txbPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbPrice.Enter += new System.EventHandler(this.txbPrice_Enter);
+            this.txbPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPrice_KeyPress);
+            this.txbPrice.Leave += new System.EventHandler(this.txbPrice_Leave);
             // 
             // label3
             // 
@@ -531,6 +475,7 @@ namespace HotelManager
             this.txbLimitPerson.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbLimitPerson.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbLimitPerson.BorderThickness = 1;
+            this.txbLimitPerson.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbLimitPerson.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbLimitPerson.Enabled = false;
             this.txbLimitPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -538,10 +483,13 @@ namespace HotelManager
             this.txbLimitPerson.isPassword = false;
             this.txbLimitPerson.Location = new System.Drawing.Point(19, 161);
             this.txbLimitPerson.Margin = new System.Windows.Forms.Padding(0);
+            this.txbLimitPerson.MaxLength = 32767;
             this.txbLimitPerson.Name = "txbLimitPerson";
             this.txbLimitPerson.Size = new System.Drawing.Size(175, 29);
             this.txbLimitPerson.TabIndex = 29;
             this.txbLimitPerson.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txbLimitPerson.Enter += new System.EventHandler(this.txbLimitPerson_Enter);
+            this.txbLimitPerson.Leave += new System.EventHandler(this.txbLimitPerson_Leave);
             // 
             // groupBox2
             // 
@@ -556,58 +504,6 @@ namespace HotelManager
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức Năng";
-            // 
-            // btnClose
-            // 
-            this.btnClose.ActiveBorderThickness = 1;
-            this.btnClose.ActiveCornerRadius = 20;
-            this.btnClose.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnClose.ActiveForecolor = System.Drawing.Color.White;
-            this.btnClose.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnClose.BackColor = System.Drawing.Color.White;
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.ButtonText = "Đóng";
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btnClose.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnClose.IdleBorderThickness = 1;
-            this.btnClose.IdleCornerRadius = 20;
-            this.btnClose.IdleFillColor = System.Drawing.Color.White;
-            this.btnClose.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnClose.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnClose.Location = new System.Drawing.Point(19, 76);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(175, 40);
-            this.btnClose.TabIndex = 13;
-            this.btnClose.TabStop = false;
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.ActiveBorderThickness = 1;
-            this.btnUpdate.ActiveCornerRadius = 20;
-            this.btnUpdate.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
-            this.btnUpdate.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.BackColor = System.Drawing.Color.White;
-            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
-            this.btnUpdate.ButtonText = "Cập Nhật";
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.IdleBorderThickness = 1;
-            this.btnUpdate.IdleCornerRadius = 20;
-            this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
-            this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(19, 26);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(175, 40);
-            this.btnUpdate.TabIndex = 11;
-            this.btnUpdate.TabStop = false;
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelName
             // 
@@ -639,25 +535,130 @@ namespace HotelManager
             this.saveRoomType.FileName = "Danh sách loại phòng";
             this.saveRoomType.Filter = "Excel File(*.xls)|*.xls|Excel File (*.xlsx) |.xlsx|PDF File(*.pdf)|*.pdf";
             // 
+            // btnClose
+            // 
+            this.btnClose.ActiveBorderThickness = 1;
+            this.btnClose.ActiveCornerRadius = 20;
+            this.btnClose.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnClose.ActiveForecolor = System.Drawing.Color.White;
+            this.btnClose.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.ButtonText = "Đóng";
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.btnClose.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnClose.IdleBorderThickness = 1;
+            this.btnClose.IdleCornerRadius = 20;
+            this.btnClose.IdleFillColor = System.Drawing.Color.White;
+            this.btnClose.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnClose.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnClose.Location = new System.Drawing.Point(19, 76);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(175, 40);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.TabStop = false;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.ActiveBorderThickness = 1;
+            this.btnUpdate.ActiveCornerRadius = 20;
+            this.btnUpdate.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
+            this.btnUpdate.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
+            this.btnUpdate.ButtonText = "Cập Nhật";
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.IdleBorderThickness = 1;
+            this.btnUpdate.IdleCornerRadius = 20;
+            this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
+            this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.Location = new System.Drawing.Point(19, 26);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(175, 40);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.ActiveBorderThickness = 1;
+            this.btnSearch.ActiveCornerRadius = 20;
+            this.btnSearch.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnSearch.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSearch.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.ButtonText = "Tìm Kiếm";
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnSearch.IdleBorderThickness = 1;
+            this.btnSearch.IdleCornerRadius = 20;
+            this.btnSearch.IdleFillColor = System.Drawing.Color.White;
+            this.btnSearch.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnSearch.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSearch.Location = new System.Drawing.Point(23, 91);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(175, 40);
+            this.btnSearch.TabIndex = 46;
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.ActiveBorderThickness = 1;
+            this.btnCancel.ActiveCornerRadius = 20;
+            this.btnCancel.ActiveFillColor = System.Drawing.Color.Red;
+            this.btnCancel.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCancel.ActiveLineColor = System.Drawing.Color.Red;
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.ButtonText = "Huỷ Tìm";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCancel.IdleBorderThickness = 1;
+            this.btnCancel.IdleCornerRadius = 20;
+            this.btnCancel.IdleFillColor = System.Drawing.Color.White;
+            this.btnCancel.IdleForecolor = System.Drawing.Color.Red;
+            this.btnCancel.IdleLineColor = System.Drawing.Color.Red;
+            this.btnCancel.Location = new System.Drawing.Point(23, 90);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(175, 40);
+            this.btnCancel.TabIndex = 48;
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // fRoomType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(781, 602);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.bunifuImageButton1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupRoomType);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.SeaGreen;
             this.Name = "fRoomType";
-            this.Text = "fRoomType";
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.Size = new System.Drawing.Size(781, 602);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.fRoomType_KeyPress);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -675,8 +676,6 @@ namespace HotelManager
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.GroupBox groupBox3;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSearch;
         private Bunifu.Framework.UI.BunifuMetroTextbox txbSearch;

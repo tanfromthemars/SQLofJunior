@@ -80,6 +80,7 @@
     <Compile Include="DAO\RoomTypeDAO.cs" />
     <Compile Include="DAO\ServiceDAO.cs" />
     <Compile Include="DAO\ServiceTypeDAO.cs" />
+    <Compile Include="DAO\StatusRoomDAO.cs" />
     <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="DTO\BillDTO.cs" />
     <Compile Include="DTO\BookRoomDTO.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="DTO\RoomTypeDTO.cs" />
     <Compile Include="DTO\ServiceDTO.cs" />
     <Compile Include="DTO\ServiceTypeDTO.cs" />
+    <Compile Include="DTO\StatusRoomDTO.cs" />
     <Compile Include="fAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +110,12 @@
     </Compile>
     <Compile Include="fAddCustomerInfo.Designer.cs">
       <DependentUpon>fAddCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fAddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddRoom.Designer.cs">
+      <DependentUpon>fAddRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="fBill.cs">
       <SubType>Form</SubType>
@@ -231,6 +239,9 @@
     <EmbeddedResource Include="fAddCustomerInfo.resx">
       <DependentUpon>fAddCustomerInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fAddRoom.resx">
+      <DependentUpon>fAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fBookRoom.resx">
       <DependentUpon>fBookRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +268,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fReceiveRoomDetails.resx">
       <DependentUpon>fReceiveRoomDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRoom.resx">
+      <DependentUpon>fRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRoomType.resx">
+      <DependentUpon>fRoomType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fUpdateCustomerInfo.resx">
       <DependentUpon>fUpdateCustomerInfo.cs</DependentUpon>

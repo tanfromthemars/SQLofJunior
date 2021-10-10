@@ -30,9 +30,9 @@ namespace HotelManager
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRoom));
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -156,12 +156,14 @@ namespace HotelManager
             this.txbSearch.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbSearch.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbSearch.BorderThickness = 1;
+            this.txbSearch.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbSearch.isPassword = false;
             this.txbSearch.Location = new System.Drawing.Point(22, 44);
             this.txbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSearch.MaxLength = 32767;
             this.txbSearch.Name = "txbSearch";
             this.txbSearch.Size = new System.Drawing.Size(175, 29);
             this.txbSearch.TabIndex = 27;
@@ -192,6 +194,7 @@ namespace HotelManager
             this.btnCancel.TabIndex = 48;
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // groupRoom
             // 
@@ -226,6 +229,7 @@ namespace HotelManager
             this.comboboxID.Size = new System.Drawing.Size(175, 29);
             this.comboboxID.Style = MetroFramework.MetroColorStyle.Green;
             this.comboboxID.TabIndex = 46;
+            this.comboboxID.UseSelectable = true;
             // 
             // label2
             // 
@@ -267,6 +271,7 @@ namespace HotelManager
             this.txbLimitPerson.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbLimitPerson.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbLimitPerson.BorderThickness = 1;
+            this.txbLimitPerson.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbLimitPerson.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbLimitPerson.Enabled = false;
             this.txbLimitPerson.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,6 +279,7 @@ namespace HotelManager
             this.txbLimitPerson.isPassword = false;
             this.txbLimitPerson.Location = new System.Drawing.Point(247, 156);
             this.txbLimitPerson.Margin = new System.Windows.Forms.Padding(0);
+            this.txbLimitPerson.MaxLength = 32767;
             this.txbLimitPerson.Name = "txbLimitPerson";
             this.txbLimitPerson.Size = new System.Drawing.Size(175, 29);
             this.txbLimitPerson.TabIndex = 44;
@@ -324,6 +330,7 @@ namespace HotelManager
             this.comboBoxStatusRoom.Size = new System.Drawing.Size(175, 29);
             this.comboBoxStatusRoom.Style = MetroFramework.MetroColorStyle.Green;
             this.comboBoxStatusRoom.TabIndex = 4;
+            this.comboBoxStatusRoom.UseSelectable = true;
             // 
             // txbNameRoom
             // 
@@ -331,12 +338,14 @@ namespace HotelManager
             this.txbNameRoom.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbNameRoom.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbNameRoom.BorderThickness = 1;
+            this.txbNameRoom.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbNameRoom.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbNameRoom.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNameRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txbNameRoom.isPassword = false;
             this.txbNameRoom.Location = new System.Drawing.Point(22, 100);
             this.txbNameRoom.Margin = new System.Windows.Forms.Padding(0);
+            this.txbNameRoom.MaxLength = 32767;
             this.txbNameRoom.Name = "txbNameRoom";
             this.txbNameRoom.Size = new System.Drawing.Size(175, 29);
             this.txbNameRoom.TabIndex = 1;
@@ -349,6 +358,7 @@ namespace HotelManager
             this.txbPrice.BorderColorIdle = System.Drawing.Color.SeaGreen;
             this.txbPrice.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
             this.txbPrice.BorderThickness = 1;
+            this.txbPrice.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txbPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txbPrice.Enabled = false;
             this.txbPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,6 +366,7 @@ namespace HotelManager
             this.txbPrice.isPassword = false;
             this.txbPrice.Location = new System.Drawing.Point(247, 100);
             this.txbPrice.Margin = new System.Windows.Forms.Padding(0);
+            this.txbPrice.MaxLength = 32767;
             this.txbPrice.Name = "txbPrice";
             this.txbPrice.Size = new System.Drawing.Size(175, 29);
             this.txbPrice.TabIndex = 42;
@@ -373,6 +384,7 @@ namespace HotelManager
             this.comboBoxRoomType.Size = new System.Drawing.Size(175, 29);
             this.comboBoxRoomType.Style = MetroFramework.MetroColorStyle.Green;
             this.comboBoxRoomType.TabIndex = 2;
+            this.comboBoxRoomType.UseSelectable = true;
             // 
             // groupBox1
             // 
@@ -394,14 +406,14 @@ namespace HotelManager
             this.dataGridViewRoom.AllowUserToResizeRows = false;
             this.dataGridViewRoom.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRoom.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewRoom.ColumnHeadersHeight = 29;
             this.dataGridViewRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -413,27 +425,27 @@ namespace HotelManager
             this.colStatus,
             this.colIdRoomType,
             this.colIdStatus});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRoom.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRoom.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewRoom.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRoom.GridColor = System.Drawing.Color.White;
             this.dataGridViewRoom.Location = new System.Drawing.Point(3, 68);
             this.dataGridViewRoom.Name = "dataGridViewRoom";
             this.dataGridViewRoom.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRoom.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRoom.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewRoom.RowHeadersVisible = false;
             this.dataGridViewRoom.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewRoom.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -441,6 +453,7 @@ namespace HotelManager
             this.dataGridViewRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewRoom.Size = new System.Drawing.Size(646, 364);
             this.dataGridViewRoom.TabIndex = 28;
+            this.dataGridViewRoom.SelectionChanged += new System.EventHandler(this.dataGridViewRoom_SelectionChanged);
             // 
             // colIDRoom
             // 
@@ -554,7 +567,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveFirstItem.AutoSize = false;
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(50, 22);
@@ -564,7 +576,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMovePreviousItem.AutoSize = false;
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(50, 22);
@@ -579,6 +590,7 @@ namespace HotelManager
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 25);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -593,7 +605,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveNextItem.AutoSize = false;
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(50, 22);
@@ -603,7 +614,6 @@ namespace HotelManager
             // 
             this.bindingNavigatorMoveLastItem.AutoSize = false;
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(50, 22);
@@ -712,6 +722,7 @@ namespace HotelManager
             this.btnAddRoom.TabIndex = 8;
             this.btnAddRoom.TabStop = false;
             this.btnAddRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // btnRoomType
             // 
@@ -738,6 +749,7 @@ namespace HotelManager
             this.btnRoomType.TabIndex = 50;
             this.btnRoomType.TabStop = false;
             this.btnRoomType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRoomType.Click += new System.EventHandler(this.btnRoomType_Click);
             // 
             // btnUpdate
             // 
@@ -778,6 +790,7 @@ namespace HotelManager
             this.btnClose.TabIndex = 27;
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // fRoom
             // 
@@ -794,7 +807,6 @@ namespace HotelManager
             this.Controls.Add(this.btnClose);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "fRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
